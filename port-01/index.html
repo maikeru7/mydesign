@@ -4,19 +4,65 @@
 <meta charset="utf-8" />
 <title>maikeru7-webdesign / Private Site / Portfolio01</title>
 <link href="/favicon.ico" rel="shortcut icon">
+<meta name="robots" content="noindex">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta name="description" content="">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/4aca0c8733.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="css/contents.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/4aca0c8733.js" crossorigin="anonymous"></script>
+<script>
+    $(function() {
+      // bodyにdivを追加
+        $('body').append('<div id="curtain">');
+        // 追加したdivを塗りつぶしてから透明化アニメーション
+          $('#curtain').css({
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#fff',
+            opacity: 100
+          }).animate({
+            opacity: 0
+          }, 2000, function() {
+          // アニメーション終了後に自身を消す
+            $(this).remove();
+          });
+    });
+    $('.fadein').css('visibility', 'hidden');
+    $(window).scroll(function() {
+      $('.fadein').each(function() {
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight + 200) {
+          $(this).addClass('scrollin');
+        }
+      });
+    });
+    $(function() {
+      var offsetY = -10;
+      var time = 500;
+      $('a[href^=#]').click(function() {
+        var target = $(this.hash);
+        if (!target.length) return ;
+        var targetY = target.offset().top+offsetY;
+        $('html,body').animate({scrollTop: targetY}, time, 'swing');
+        window.history.pushState(null, null, this.hash);
+        return false;
+      });
+    });
+</script>
 </head>
 <body id="mkw001-por01" class="private-Site-por01">
 <div id="wrapper">
 <header id="globalHeader">
     <div class="headerWrap">
-        <h1 id="siteName"><a href="/"><img src="img/" alt="maikeru7"></a></h1>
+        <h1 id="siteName"><a href="/"><img src="img/maikeru7-tm.jpeg" alt="maikeru7"><span>maikeru7-webdesign</span></a></h1>
         <nav id="GlobalNav">
             <h1>メニュー</h1>
             <div class="button">
@@ -38,7 +84,143 @@
     </div><!-- .headerWrap -->
 </header>
 <main>
-<p>Hello World</p>
+<section class="cantents-wrap">
+  <section class="main-promtion">
+    <div class="main-promtion_primaryInfo">
+        <picture class="main-visual">
+            <source srcset="img/mainVisual.webp" type="image/webp">
+            <img src="img/mainVisual.jpg" alt="">
+        </picture>
+        <div class="detail">
+            <hgroup>
+                <h1><span>01.</span>無印良品キャンプ場</h1>
+                <h2>MUJI CAMPGROUND</h2>
+                <div class="detail-data">
+                    <p>サイトメンテナンスを含むコーディング作業／バナー作成／WEBサイトデザイン</p>
+                    <p>HTML、CSS、Photoshop、Illustrator</p>
+                    <p>CMS：Movable Type</p>
+                    <p>URL：<a href="https://www.muji.net/camp/" target="_blank" rel="noopener noreferrer">https://www.muji.net/camp/</a></p>
+                </div>
+            </hgroup>
+            <section class="comment">
+                <p>10年以上もの間、担当させていただいたWEBサイトになります。</p>
+                <p>主な作業内容として、サイトのメンテナンス、バナー制作がメインで、その他にイベント情報告知用のWEBサイト制作などがあります。</p>
+                <p>担当者への原稿や写真素材の依頼、スケジュール管理、サイトのデザイン、コーディング、Movable Typeへの流し込みまでを担当していました。</p>
+            </section>
+        </div>
+    </div>
+    <div class="main-promtion_secondaryInfo fadein">
+        <hgroup class="fadein">
+            <div class="ttlbox">
+                <h1><span>other</span>Contents</h1>
+            </div>
+        </hgroup>
+        <div class="details">
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/user/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_01.webp" type="image/webp">
+                    <img src="img/subVisual_01.jpg" alt="">
+                </picture>
+                <div class="contents-detail">
+                    <h2>予約トップページ</h2>
+                    <p>コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/school/about/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_02.webp" type="image/webp">
+                    <img src="img/subVisual_02.jpg" alt="">
+                </picture>
+                <div class="contents-detail">
+                    <h2>アウトドア教室について</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/contents/school/kids_summer_camp/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_03.webp" type="image/webp">
+                    <img src="img/subVisual_03.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>キッズサマーキャンプ</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/sotoasobi/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_04.webp" type="image/webp">
+                    <img src="img/subVisual_04.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>外あそび</h2>
+                    <p>コーディング作業／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/contents/premium_dinner/2019/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_05.webp" type="image/webp">
+                    <img src="img/subVisual_05.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>大人のPREMIUM DINNER 2019</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/school/package_plan/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_06.webp" type="image/webp">
+                    <img src="img/subVisual_06.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>はじめての親子キャンプ</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/contents/itsumonomoshimo_caravan/ikebukuro/2022/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_07.webp" type="image/webp">
+                    <img src="img/subVisual_07.png" alt="">
+                </picture>
+                <div class="contents-detail"><h2>いつものもしも CARAVAN</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/contents/school/kodomo_otona_camp/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_08.webp" type="image/webp">
+                    <img src="img/subVisual_08.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>コドモ ト オトナ ノ サマーキャンプ</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+            <div class="details-item fadein"><a href="https://www.muji.net/camp/contents/wakasagi/" target="_blank" rel="noopener noreferrer">
+                <picture>
+                    <source srcset="img/subVisual_09.webp" type="image/webp">
+                    <img src="img/subVisual_09.jpg" alt="">
+                </picture>
+                <div class="contents-detail"><h2>氷上わかさぎ釣り</h2>
+                    <p>WEBサイトデザイン／コーディング作業（レスポンシブ化）／バナー作成／サイト内Youtube 動画編集</p>
+                    <p>HTML、CSS、Photoshop、Movable Type</p>
+                    <p class="btn">WEB Site</p>
+                </div></a>
+            </div>
+        </div>
+    </div>
+   </section>
+</section>
 
 </main>
 </div>

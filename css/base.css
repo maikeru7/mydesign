@@ -1,5 +1,5 @@
 @charset "utf-8";
-body {color: #333; font-size: 14px; line-height: 1.5; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;}
+body {background-color: #fff; color: #333; font-size: 14px; line-height: 1.5; font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;}
 h1,
 h2,
 h3,
@@ -10,9 +10,15 @@ h2 {font-size:18px;}
 h3 {font-size:16px;}
 h4 {font-size:14px;}
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #efefef;
+  }
+}
+
 img {vertical-align: bottom;}
 a {color: #333; text-decoration: none;}
-a:hover {color: #7F0019;}
+a:hover {}
 .ttl_append,
 .attr {font-size: 13px; color: #999; margin-top: 5px;}
 *,
@@ -21,9 +27,9 @@ a:hover {color: #7F0019;}
   -webkit-font-smoothing:antialiased;
   -moz-font-smoothing:antialiased;
   font-smoothing:antialiased;
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  -ms-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,13 +37,18 @@ figure {margin:0; padding:0;}
 figcaption {margin:10px 0 0 0; padding:0; line-height:1.5;}
 
 .relatedLink a {display: inline-block; background: url(https://www.muji.net/img/common/arrow_right.png) no-repeat 14px 50%; border: 1px solid #ccc; padding: 7px 14px 7px 28px; margin:20px 0 0; text-decoration: none; font-weight:bold; float:right;}
-.relatedLink a:hover {border: 1px solid #7F0019;}
+.relatedLink a:hover {border: 1px solid;}
 
 .annotaition { font-size: 12px; }
 
 ul li {list-style: none;}
 
 em {font-style:initial; font-weight:bold;}
+
+/**/
+#curtain {z-index: 10;}
+.fadein.scrollin {opacity : 1; transform : translate(0, 0);}
+.fadein {opacity : 0.1; transform : translate(0, 50px); transition : all 1000ms;}
 
 /*パンくず*/
 ul#pan {margin:0; padding:0 0 5px 0; font-size: 10px; color: #999;}
@@ -59,12 +70,13 @@ ul#pan li a {text-decoration: underline;}
 }
 /*パンくず*/
 
-header#globalHeader {margin: 20px 0 0; padding-bottom: 20px; border-bottom: 1px solid #eee;}
+header#globalHeader {margin: 20px 0 0; padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.1);}
 
 .headerWrap {max-width: 1200px; margin: 0 auto; padding-left:10px; padding-right:10px;}
-.headerWrap h1#siteName {margin: -9px 0 0; float: left;}
-.headerWrap h1#siteName a {display: block;}
-.headerWrap h1#siteName img {width: 200px;}
+.headerWrap h1#siteName {margin:0; float: left;}
+.headerWrap h1#siteName a {display:flex; align-items: center;}
+.headerWrap h1#siteName a span {font-size: 18px; margin-left: 0.5em; letter-spacing:-0.01em;}
+.headerWrap h1#siteName img {width: 60px; border-radius: 50%;}
 #GlobalNav {float: right;}
 #GlobalNav h1 {position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);}
 #GlobalNav ul {margin: 0; padding: 0; position: relative;}
@@ -75,13 +87,13 @@ header#globalHeader {margin: 20px 0 0; padding-bottom: 20px; border-bottom: 1px 
 #GlobalNav ul li.ns {font-size: 13px; position: relative; top: 13px; border-left: 1px solid #ccc; padding-left:9px;}
 #GlobalNav ul li.ns a {line-height: 1.5; display: inline-block;}
 #GlobalNav h1,
-#GlobalNav a {color: #191919; text-decoration: none;}
+#GlobalNav a {color: #333; text-decoration: none;}
 
 .more {text-align: right; font-size: 12px; margin: 20px 0 0;}
 .more a:after {content: url("/images/arrow_right_s.png"); margin-left: 5px; vertical-align: top;}
 
 footer * {}
-footer {width: 100%; background-color:#f7f7f7; padding: 30px 0; position: relative; bottom: 0; color:#333;}
+footer {width: 100%; background-color:rgba(0,0,0,0.1); padding: 30px 0; position: relative; bottom: 0; color:#333;}
 footer a {text-decoration: none; color:#333;}
 footer a:hover {text-decoration:none; color:#666;}
 footer .footerWrap {width: 1200px; margin: 0 auto;}
@@ -185,7 +197,7 @@ nav#contentNav section:last-child {margin: 0;}
 @media screen and (max-width: 768px) {
   .headerWrap {width: 100%;}
   .headerWrap h1#siteName {margin-left: 15px;}
-  .headerWrap h1#siteName a img {width: 200px;}
+  .headerWrap h1#siteName a img {width: 60px;}
   #GlobalNav h1 {
     display: block;
     background: url(/img/menu_b.png) no-repeat center center;
@@ -242,7 +254,6 @@ nav#contentNav section:last-child {margin: 0;}
   #GlobalNav ul li a {border-bottom: 0; color: #fff;}
 }
 @media screen and (max-width: 768px) {
-  main header {padding-bottom:10px;}
   .localNav {
     float: none;
     overflow: scroll;
@@ -261,9 +272,6 @@ nav#contentNav section:last-child {margin: 0;}
   nav#contentNav section.contents__block {margin: 0 2% 0 0;}
   nav#contentNav section:last-child {margin: 0;}
 }
-
-main header {max-width: 1200px; width: auto; margin: 0 auto 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,0.2);}
-main header h1 {font-size: 22px; float: left; margin: 0;}
 
 @media only screen and (max-device-width: 768px) {
   footer {padding: 30px 0;}
