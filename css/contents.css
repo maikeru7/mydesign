@@ -16,15 +16,14 @@ main .cantents-wrap .main-promtion h1 {font-size: 23px;}
 .main-promtion_primaryInfo div.detail hgroup h1 {border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: .4em; margin-bottom: .2em; line-height: 1.0; letter-spacing:-0.01em;}
 .main-promtion_primaryInfo div.detail hgroup h1 span {font-weight: normal; margin-right: 0.5em; font-size: 32px;}
 .main-promtion_primaryInfo div.detail hgroup h2 {line-height: 1.0; letter-spacing:-0.01em;}
-.main-promtion_primaryInfo div.detail hgroup .detail-data {padding-top: 15px; padding-left: .2em;}
-.main-promtion_primaryInfo div.detail hgroup .detail-data p {line-height: 1.8; letter-spacing:-0.01em;}
-.main-promtion_primaryInfo div.detail .comment {background-color: rgba(0,0,0,0.4); padding: 15px; border-radius: 5px; color: #fefefe;}
-.main-promtion_primaryInfo div.detail .comment p {line-height: 1.8; letter-spacing:-0.01em;}
+.main-promtion_primaryInfo .detail-data {display: inline-flex;}
+.main-promtion_primaryInfo .detail-data a {line-height: 1.8; letter-spacing:-0.01em; color: rgba(0,0,0,0.4); margin: 0; padding: 10px 20px; border: 1px solid rgba(0,0,0,0.3); border-radius: 5px; font-size: 18px; transition: all 0.5s 0s ease;}
+.main-promtion_primaryInfo .detail-data a:hover {color:#333; border: 1px solid #333; border-radius: 20px;}
 
 @media screen and (max-width: 768px) {
   .main-promtion_primaryInfo {display:block;}
   .main-promtion_primaryInfo picture.main-visual,
   .main-promtion_primaryInfo div.detail {width: 100%;}
   .main-promtion_primaryInfo div.detail {padding: 20px;}
-  .main-promtion_primaryInfo div.detail .comment p {line-height: 1.6;}
+  .main-promtion_primaryInfo .detail-data {display: flex;}
 }
