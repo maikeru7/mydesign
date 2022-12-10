@@ -18,7 +18,8 @@ h4 {font-size:14px;}
 
 img {vertical-align: bottom;}
 a {color: #333; text-decoration: none;}
-a:hover {}
+a:hover {color: #000;}
+
 .ttl_append,
 .attr {font-size: 13px; color: #999; margin-top: 5px;}
 *,
@@ -45,10 +46,11 @@ ul li {list-style: none;}
 
 em {font-style:initial; font-weight:bold;}
 
-/**/
+/*effect*/
 #curtain {z-index: 10;}
 .fadein.scrollin {opacity : 1; transform : translate(0, 0);}
 .fadein {opacity : 0.1; transform : translate(0, 50px); transition : all 1000ms;}
+/*effect*/
 
 /*パンくず*/
 ul#pan {margin:0; padding:0 0 5px 0; font-size: 10px; color: #999;}
@@ -83,7 +85,7 @@ header#globalHeader {margin: 20px 0 0; padding-bottom: 20px; border-bottom: 1px 
 #GlobalNav ul li {list-style: none; float: left; margin-left: 20px; font-weight: normal;}
 #GlobalNav ul li a {padding: 0; display: block; line-height: 45px;}
 #GlobalNav ul li a:hover {}
-#GlobalNav .button {display: none; background-color: #fefefe;}
+#GlobalNav .button {display: none; /*background-color: #fff;*/}
 #GlobalNav ul li.ns {font-size: 13px; position: relative; top: 13px; border-left: 1px solid #ccc; padding-left:9px;}
 #GlobalNav ul li.ns a {line-height: 1.5; display: inline-block;}
 #GlobalNav h1,
