@@ -12,55 +12,8 @@
 <script src="https://kit.fontawesome.com/4aca0c8733.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/base.css">
-<script>
-    $(function(){
-        $("#GlobalNav .button").on("click",function(){
-        $("#GlobalNav").toggleClass("open");
-        });
-    });
-    $(function() {
-      // bodyにdivを追加
-        $('body').append('<div id="curtain">');
-        // 追加したdivを塗りつぶしてから透明化アニメーション
-          $('#curtain').css({
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#fff',
-            opacity: 100
-          }).animate({
-            opacity: 0
-          }, 2000, function() {
-          // アニメーション終了後に自身を消す
-            $(this).remove();
-          });
-    });
-    $('.fadein').css('visibility', 'hidden');
-    $(window).scroll(function() {
-      $('.fadein').each(function() {
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight + 200) {
-          $(this).addClass('scrollin');
-        }
-      });
-    });
-    $(function() {
-      var offsetY = -10;
-      var time = 500;
-      $('a[href^=#]').click(function() {
-        var target = $(this.hash);
-        if (!target.length) return ;
-        var targetY = target.offset().top+offsetY;
-        $('html,body').animate({scrollTop: targetY}, time, 'swing');
-        window.history.pushState(null, null, this.hash);
-        return false;
-      });
-    });
-</script>
+<link rel="stylesheet" href="css/contents.css">
+<script src="js/contents-efect.js"></script>
 </head>
 <body id="mkw001" class="private-Site-top">
 <div id="wrapper">
@@ -89,8 +42,45 @@
     </div><!-- .headerWrap -->
 </header>
 <main>
-<p>Hello World</p>
-
+  <section class="cantents-wrap">
+    <section class="main-promtion">
+      <hgroup>
+        <div class="ttlbox">
+            <h1>Portfolio</h1>
+        </div>
+      </hgroup>
+      <div class="main-promtion_primaryInfo">
+        <picture class="main-visual">
+            <source srcset="port-01/img/mainVisual.webp" type="image/webp">
+            <img src="port-01/img/subVisual_01.jpg" alt="">
+        </picture>
+        <div class="detail">
+            <hgroup>
+                <h1><span>01.</span>無印良品キャンプ場</h1>
+                <h2>MUJI CAMPGROUND</h2>
+                <div class="detail-data">
+                    
+                </div>
+            </hgroup>
+        </div>
+      </div>
+      <div class="main-promtion_primaryInfo fadein">
+        <picture class="main-visual">
+            <source srcset="port-02/img/mainVisual.webp" type="image/webp">
+            <img src="port-02/img/mainVisual.png" alt="">
+        </picture>
+        <div class="detail">
+            <hgroup>
+                <h1><span>02.</span>株式会社良品計画</h1>
+                <h2>Ryohin Keikaku Co., Ltd.</h2>
+                <div class="detail-data">
+                    
+                </div>
+            </hgroup>
+        </div>
+      </div>
+    </section>
+  </section>
 </main>
 </div>
 <footer id="contentFooter">

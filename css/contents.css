@@ -1,0 +1,30 @@
+main .cantents-wrap .main-promtion {margin: 0 auto 20px; padding-bottom: 20px;}
+main .cantents-wrap .main-promtion h1 {font-size: 23px;}
+@media screen and (max-width: 768px) {
+  main .cantents-wrap .main-promtion {padding-bottom:10px;}
+}
+
+
+.main-promtion hgroup .ttlbox {max-width: 200px; margin:50px auto 50px; text-align: center; border-bottom:1px solid rgba(0,0,0,0.1);}
+.main-promtion hgroup .ttlbox h1 {text-align: center; line-height: 1.0; letter-spacing:-0.01em; margin-bottom: 0.3em;}
+
+.main-promtion_primaryInfo {display: flex; align-items: center; margin-bottom: 50px;}
+.main-promtion_primaryInfo picture.main-visual,
+.main-promtion_primaryInfo div.detail {width: 50%;}
+.main-promtion_primaryInfo div.detail {padding: 50px;}
+.main-promtion_primaryInfo div.detail hgroup {margin-bottom: 20px;}
+.main-promtion_primaryInfo div.detail hgroup h1 {border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: .4em; margin-bottom: .2em; line-height: 1.0; letter-spacing:-0.01em;}
+.main-promtion_primaryInfo div.detail hgroup h1 span {font-weight: normal; margin-right: 0.5em; font-size: 32px;}
+.main-promtion_primaryInfo div.detail hgroup h2 {line-height: 1.0; letter-spacing:-0.01em;}
+.main-promtion_primaryInfo div.detail hgroup .detail-data {padding-top: 15px; padding-left: .2em;}
+.main-promtion_primaryInfo div.detail hgroup .detail-data p {line-height: 1.8; letter-spacing:-0.01em;}
+.main-promtion_primaryInfo div.detail .comment {background-color: rgba(0,0,0,0.4); padding: 15px; border-radius: 5px; color: #fefefe;}
+.main-promtion_primaryInfo div.detail .comment p {line-height: 1.8; letter-spacing:-0.01em;}
+
+@media screen and (max-width: 768px) {
+  .main-promtion_primaryInfo {display:block;}
+  .main-promtion_primaryInfo picture.main-visual,
+  .main-promtion_primaryInfo div.detail {width: 100%;}
+  .main-promtion_primaryInfo div.detail {padding: 20px;}
+  .main-promtion_primaryInfo div.detail .comment p {line-height: 1.6;}
+}
