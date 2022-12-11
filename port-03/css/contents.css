@@ -42,7 +42,7 @@ main .cantents-wrap .main-promtion h1 {font-size: 23px;}
 @media screen and (max-width: 768px) {
   .main-promtion_secondaryInfo {padding-left: 20px; padding-right: 20px;}
   .main-promtion_secondaryInfo .details .details-item {width: calc((100% - 20px) / 2); margin-bottom: 20px;}
-  .main-promtion_secondaryInfo .details .details-item .contents-detail {max-height: 158px; height: auto;}
+  .main-promtion_secondaryInfo .details .details-item .contents-detail {max-height: 160px; height: 140px;}
   .main-promtion_secondaryInfo .details .details-item .contents-detail h2 {line-height: 1.2; font-size: 14px;}
   .main-promtion_secondaryInfo .details .details-item .contents-detail p {line-height: 1.4; font-size: 10px;}
 }
