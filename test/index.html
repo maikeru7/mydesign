@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/4aca0c8733.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/contents.css">
+  <title>test</title>
+</head>
+<body>
+  <h2>お知らせ</h2>
+  <ul id="test">
+
+  </ul>
+
+  <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+  <script>
+    const { createClient } = microcms;
+    
+    // Initialize Client SDK.
+    const client = createClient({
+      serviceDomain: "ti6flw98vx", // YOUR_DOMAIN is the XXXX part of XXXX.microcms.io
+      apiKey: "TMG0AkVBs6WBfdeu1gSW5p9ik2Z28jfmyTjs",
+      // retry: true // Retry attempts up to a maximum of two times.
+    });
+    client
+      .get({
+        endpoint: 'test',
+      })
+      .then((res) => {
+        const test = document.querySelector('#test');
+        // console.log(res.contents);
+        res.contents.forEach((content) => {
+          const li = document.createElement('li');
+          const h3 = document.createElement('h3');
+          h3.textContent = content.title;
+          const p = document.createElement('p');
+          p.textContent = content.body;
+          li.appendChild(h3);
+          li.appendChild(p);
+          test.appendChild(li);
+          // console.log(content.title);
+          // console.log(content.body);
+        });
+      });
+    </script>
+</body>
+</html>
