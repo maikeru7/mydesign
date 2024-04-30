@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>html・CSS コーディング</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css" integrity="sha256-/jO/fTJ0k1OjSZEq6mnys4V6x6RG6MVJv34CFHWv0To=" crossorigin="anonymous">
+<link rel="stylesheet" href="css/contents.css">
+</head>
+<body>
+<main>
+<section id="cssAnim" class="coding-tips">
+<div class="coding-tips_wrap">
+  <h1>CSSトランジションとCSSアニメーションについて</h1>
+  <div class="coding-tips_block">
+    <h2>トランジションのプロパティについて</h2>
+    <div>
+      <h3>CSS Transition</h3>
+      <p>
+        <em>トランジションとは、</em>要素の1つの状態から別の状態への変化をスムーズにアニメーションさせるために使用されるCSSプロパティです。<br>
+        一般的に、マウスを要素に重ねる（ホバーする）などのユーザーのアクションに応じて、要素の特定の属性（例：色、サイズ、位置など）が変化する場合に利用されます。<br>
+        たとえば、ボタンの色がマウスがホバーされたときに変化するように設定することができます。
+      </p>
+
+      <div class="focus">
+        <div class="explanation">
+          <p>
+            <span>具体的には</span>
+            セレクターに対し、トランジションというプロパティに動きの詳細を決める値を組みこむ、従来通りの構成で要素を動かす事ができます。
+          </p>
+          <p>
+            <span>（例）</span>
+            トランジション有りと無しの比較<br>
+            トランジションがない場合、青いボックスにホバーをすると瞬時に指定された幅に変化します。<br>
+            それに比べて、トランジションがある場合は、対象物（ここでは横幅）、4
+          </p>
+        </div>
+        <div class="code-block">
+          <div class="code-Wrap">
+            <p>トランジション無し</p>
+<pre>
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box:hover {
+  width: 200px;
+}
+</pre>
+            <div>
+              <div class="blue-box unmove"></div>
+            </div>
+          </div>
+          <div class="code-Wrap">
+            <p>トランジション有り</p>
+<pre>
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition: all 1s ease-in-out;</span> <span style="opacity: .5;">/* transitionのプロパティに対し、時間と動きの値を入れるだけ */</span>
+}
+.blue-box:hover {
+  width: 200px;
+}
+</pre>
+            <div>
+              <div class="blue-box move"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="propertyType">
+        <table>
+          <thead>
+            <tr><th class="property name">プロパティ名</th><th class="property read">読み方</th><th class="property explanation">説明</th></tr>
+          </thead>
+          <tbady>
+            <tr><td>transition-duration</td><td>トランジション・デュレーション</td><td>変化が始まって終わるまでの時間を指定します。</td></tr>
+            <tr><td>transition-property</td><td>トランジション・プロパティ</td><td>変化が適用される CSS のプロパティを指定します。</td></tr>
+            <tr><td>transition-timing-function</td><td>トランジション・タイミング・ファンクション</td><td>変化の度合いを指定します。</td></tr>
+            <tr><td>transition-delay</td><td>トランジション・ディレイ</td><td>変化が始まる時間を指定します。</td></tr>
+            <tr><td>transition</td><td>トランジション</td><td>上記の 4 つのプロパティを一括で指定できる、ショートハンド・プロパティです。</td></tr>
+          </tbady>
+        </table>
+      </div>
+
+      <div class="focus">
+        <div class="explanation">
+          <p>
+            <span>transitionプロパティについて</span>
+          </p>
+          <p>
+            transitionは、transition-duration、transition-property、transition-timing-function、transition-delayの4つのプロパティに分けて指定できます。それぞれ のプロパティを個別に設定 することで、より細かい動きを表現することができ、以下のように記入する事ができます。
+          </p>
+        </div>
+        <div class="code-block">
+          <div class="code-Wrap">
+            <p>4つのプロパティ</p>
+<pre>
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition-duration: 1s;</span> <span style="opacity: .5;">/* アニメーションの時間（秒） */</span>
+  <span style="color: red;">transition-property: all;</span> <span style="opacity: .5;">/* アニメーションを適用するプロパティ（ここでは全てのプロパティ） */</span>
+  <span style="color: red;">transition-timing-function: ease-in-out;</span> <span style="opacity: .5;">/* アニメーションのタイミング関数 */</span>
+  <span style="color: red;">transition-delay: 1s;</span> <span style="opacity: .5;">/* アニメーションの遅延（秒） */</span>
+}
+.blue-box:hover {
+  width: 200px;
+}
+</pre>
+              <p>クラス名blue-boxにホバーした場合、1秒後に幅が200pxに変化します。この変化に1秒かけて、全てのプロパティがease-in-outというタイミング関数でアニメーションされます。</p>
+            <div>
+              <div class="blue-box move_02"></div>
+            </div>
+          </div>
+
+          <div class="code-Wrap">
+            <p>transitionのみ</p>
+<pre>
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition: all 1s ease-in-out 1s;</span> <span style="opacity: .5;">/* ※transitionのプロパティの順番を間違えないように注意 */</span>
+}
+.blue-box:hover {
+  width: 200px;
+}
+</pre>
+              <p>4つのtransitionプロパティをひとまとめに書くとこうなります。<br>transition: all 1s ease-in-out 1s; transition-property(all)、transition-duration(1s)、transition-timing-function(ease-in-out)、transition-delay(1s) の順番で記述します。</p>
+            <div>
+              <div class="blue-box move_03"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="coding-tips_block">
+    <h2>アニメーションのプロパティについて</h2>
+    <div>
+      <h3>CSS Animation</h3>
+      <p>アニメーション: 複数の状態を指定して、時間経過とともに変化するアニメーションを作成できます。たとえば、要素が回転したり、移動したりするなど。</p>
+      
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+</section>
+
+</main>
+</body>
+</html>

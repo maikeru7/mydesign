@@ -1,0 +1,193 @@
+:root {
+  --base_color1:#111;
+  --base_color2:#cb0000;
+  --base_color3:#fff;
+  --base_color4:#363636;
+  --base_color5:#c8dfee;
+  --base_color6:#f4f4f4;
+}
+
+/*
+GENERAL STYLING
+======================= */
+* {
+  font-feature-settings: "palt" 1;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--base_color1);
+  font-family: 
+  "Hiragino Kaku Gothic Pro", 
+  "ヒラギノ角ゴ Pro W3", 
+  Meiryo, 
+  メイリオ, 
+  "游ゴシック Medium", 
+  "Yu Gothic Medium", 
+  游ゴシック体, 
+  "Yu Gothic", 
+  YuGothic, 
+  "MS PGothic", 
+  Osaka, 
+  arial, 
+  sans-serif;
+  padding: 0;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+p {
+  font-size: .8rem;
+  line-height: 1.5;
+}
+em {
+  font-style: normal;
+}
+/*
+GENERAL STYLING
+======================= */
+
+
+main {
+  width: 90%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.coding-tips {
+  padding: 2rem;
+}
+.coding-tips h1 {
+  border-bottom: 1px solid;
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.coding-tips_block {
+  margin-bottom: 2.5rem;
+}
+
+.focus {
+  margin: 2rem auto 0;
+}
+.focus .explanation {
+  background-color: var(--base_color5);
+  padding: 20px;
+}
+.focus .explanation p {
+  padding: .5rem;
+}
+.focus .explanation p:first-child {
+  border-bottom: 1px dotted var(--base_color4);
+}
+.focus .explanation p span {
+  display: block;
+  font-weight: 700;
+}
+.code-block {
+  background-color:var(--base_color6);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: .8rem;
+  display: flex;
+  align-items: stretch;
+}
+.code-Wrap {
+  width: 50%;
+  margin: .5rem;
+}
+.code-Wrap p {
+  margin-bottom: .5rem;
+}
+.code-Wrap pre {
+  margin-bottom: 1rem;
+  padding: .5rem;
+  background-color: #d7d7d7;
+}
+
+.blue-box.unmove {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box.unmove:hover {
+  width: 200px;
+}
+.blue-box.move {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: all 1s ease-in-out;
+}
+.blue-box.move:hover {
+  width: 200px;
+}
+.blue-box.move_02 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition-duration: 1s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+}
+.blue-box.move_02:hover {
+  width: 200px;
+}
+.blue-box.move_03 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: all 1s ease-in-out 1s;
+}
+.blue-box.move_03:hover {
+  width: 200px;
+}
+
+/*propertyType*/
+.propertyType {
+  padding: 20px 0 0;
+}
+.propertyType table {
+  width: 100%;
+  border-left:1px solid #ccc;
+  border-top:1px solid #ccc;
+}
+.propertyType table  {
+  width: 100%;
+  font-size: .8rem;
+}
+.propertyType table th,
+.propertyType table td {
+  padding: .5rem 1rem;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.propertyType table th {
+  background-color: var(--base_color5);
+}
+.property.name {
+  width: 20%;
+}
+.property.read {
+  width: 30%;
+}
+.property.explanation {
+  width: 50%;
+}
+
+
