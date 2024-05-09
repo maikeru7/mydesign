@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>html・CSS コーディング</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css" integrity="sha256-/jO/fTJ0k1OjSZEq6mnys4V6x6RG6MVJv34CFHWv0To=" crossorigin="anonymous">
+<link rel="stylesheet" href="css/contents.css">
+</head>
+<body>
+<main>
+<section id="cssGrad" class="coding-tips">
+<div class="coding-tips_wrap">
+  <h1>CSSのみで構成するグラデーション</h1>
+
+  <div class="coding-tips_block">
+    <h2>ライナーグラディエントについて</h2>
+    <div class="coding-tips_blockinner">
+      <h3>linear-gradient</h3>
+      <p>
+        <em>linear-gradientは</em>backgroundプロパティで使用する値の一つで、cssで背景を2色以上使用してクラデーション効果を生み出す事が出来ます。<br>
+        開始位置から終了位置までそれぞれに色を指定し、上から下、左から右など自由に方向を決める事で様々な表現ができます。
+      </p>
+
+      <div class="focus">
+        <div class="explanation">
+          <p class="read">
+            <span>具体的には</span>
+            要素にbackgroundのプロパティを設定する際に開始位置(0%)の色を決めて、次に終了位置の色を決める(100%)。続いて方向(to top,to bottom,90deg など)を決めると、2色のグラデーションを作る事が出来ます。
+          </p>
+          <section>
+            <p>
+              <span>（例）グラデーションの基本的な記入方法</span>
+            </p>
+            <pre>
+グラデーションを掛けたい要素のセレクタ {
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); <span style="opacity: .5;">/* 0%：#cd9cf2、100%：#f6f3ff、下から上に向かっていくグラデーション */</span>
+}
+            </pre>
+
+          </section>
+        </div>
+        <div class="code-block">
+          <div class="code-Wrap ver2">
+
+            <p>
+              基本的なグラデーションの方向や色数を変えたもをそれぞれ記載しています。
+            </p>
+
+            <pre>
+.box.gradecolor1 {
+  background: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+.box.gradecolor2 {
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+.box.gradecolor3 {
+  background: linear-gradient(to right, #f78ca0 0%, #f9748f 20%, #fd868c 60%, #fe9a8b 100%);
+}
+            </pre>
+            <div class="boxwrap">
+              <div class="box gradecolor1"></div>
+              <div class="box gradecolor2"></div>
+              <div class="box gradecolor3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</div>
+</section>
+</main>  
+</body>
+</html>

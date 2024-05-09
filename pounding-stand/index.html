@@ -12,7 +12,7 @@
 <main>
 <section id="cssAnim" class="coding-tips">
 <div class="coding-tips_wrap">
-  <h1>CSSトランジションとCSSアニメーションについて</h1>
+  <h1>CSSのみで構成するアニメーション</h1>
 
   <div class="coding-tips_block">
     <h2>トランジションのプロパティについて</h2>
@@ -26,7 +26,7 @@
 
       <div class="focus">
         <div class="explanation">
-          <p>
+          <p class="read">
             <span>具体的には</span>
             セレクターに対し、トランジションというプロパティに動きの詳細を決める値を組みこむ、従来通りの構成で要素を動かす事ができます。
           </p>
@@ -78,7 +78,7 @@
 
       <div class="focus">
         <div class="explanation">
-          <p>
+          <p class="read">
             <span>transitionプロパティについて</span>
           </p>
           <p>
@@ -121,7 +121,7 @@
   width: 200px;
 }
 </pre>
-              <p>4つのtransitionプロパティをひとまとめに書くとこのようになります。<br><span style="color: red;">transition: all 1s ease-in-out 1s;</span> <br>transition-property(all)、transition-duration(1s)、transition-timing-function(ease-in-out)、transition-delay(1s) の順番で記述しています。</p>
+              <p>4つのtransitionプロパティをひとまとめに書くと下記のようになります。<br><span style="color: red;">transition: all 1s ease-in-out 1s;</span> <br>transition-property(all)、transition-duration(1s)、transition-timing-function(ease-in-out)、transition-delay(1s) の順番で記述しています。</p>
             <div>
               <div class="blue-box move_03"></div>
             </div>
@@ -294,7 +294,7 @@
         <div class="explanation">
           <p class="read">
             <span>具体的には</span>
-            CSS TransitionやCSS Animationと組み合わせて使用するため以下のような記述になります。
+            CSS TransitionやCSS Animationと組み合わせて使用するためには、以下のような記述になります。
           </p>
           <section>
             <p>
@@ -311,7 +311,7 @@
             </pre>
             <p>
               要素をマウスカーソルで覆った際に変化させたい場合、擬似クラス(:hover) に対し transformプロパティ内で rotate や scale を設定し、動かしたい要素のセレクタに transition プロパティを設定します。<br>
-              transition プロパティは、要素の状態が変化する際のアニメーションを定義します。アニメーションの対象（ここではtransform）、時間、タイミングなどを指定することで、滑らかな動きを実現できます。
+              transition プロパティは、要素の状態が変化する際のアニメーションを定義します。アニメーションの対象（ここではtransform もしくはallを使用）、時間、タイミングなどを指定することで、滑らかな動きを実現できます。
             </p>
           </section>
 
