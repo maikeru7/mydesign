@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
+<meta name="robots" content="noindex">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>html・CSS コーディング</title>
@@ -12,14 +13,15 @@
 <section id="cssAnim" class="coding-tips">
 <div class="coding-tips_wrap">
   <h1>CSSトランジションとCSSアニメーションについて</h1>
+
   <div class="coding-tips_block">
     <h2>トランジションのプロパティについて</h2>
-    <div>
+    <div class="coding-tips_blockinner">
       <h3>CSS Transition</h3>
       <p>
         <em>トランジションとは、</em>要素の1つの状態から別の状態への変化をスムーズにアニメーションさせるために使用されるCSSプロパティです。<br>
         一般的に、マウスを要素に重ねる（ホバーする）などのユーザーのアクションに応じて、要素の特定の属性（例：色、サイズ、位置など）が変化する場合に利用されます。<br>
-        たとえば、ボタンの色がマウスがホバーされたときに変化するように設定することができます。
+        具体的な使用例として、ボタンの色がマウスがホバーされたときに変化するように設定することができます。
       </p>
 
       <div class="focus">
@@ -32,7 +34,7 @@
             <span>（例）</span>
             トランジション有りと無しの比較<br>
             トランジションがない場合、青いボックスにホバーをすると瞬時に指定された幅に変化します。<br>
-            それに比べて、トランジションがある場合は、対象物（ここでは横幅）、4
+            それに比べて、トランジションがある場合は、対象物に対しtransitionで指定した通りに変化します。
           </p>
         </div>
         <div class="code-block">
@@ -52,6 +54,7 @@
               <div class="blue-box unmove"></div>
             </div>
           </div>
+
           <div class="code-Wrap">
             <p>トランジション有り</p>
 <pre>
@@ -69,22 +72,8 @@
               <div class="blue-box move"></div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="propertyType">
-        <table>
-          <thead>
-            <tr><th class="property name">プロパティ名</th><th class="property read">読み方</th><th class="property explanation">説明</th></tr>
-          </thead>
-          <tbady>
-            <tr><td>transition-duration</td><td>トランジション・デュレーション</td><td>変化が始まって終わるまでの時間を指定します。</td></tr>
-            <tr><td>transition-property</td><td>トランジション・プロパティ</td><td>変化が適用される CSS のプロパティを指定します。</td></tr>
-            <tr><td>transition-timing-function</td><td>トランジション・タイミング・ファンクション</td><td>変化の度合いを指定します。</td></tr>
-            <tr><td>transition-delay</td><td>トランジション・ディレイ</td><td>変化が始まる時間を指定します。</td></tr>
-            <tr><td>transition</td><td>トランジション</td><td>上記の 4 つのプロパティを一括で指定できる、ショートハンド・プロパティです。</td></tr>
-          </tbady>
-        </table>
+        </div>
       </div>
 
       <div class="focus">
@@ -93,75 +82,328 @@
             <span>transitionプロパティについて</span>
           </p>
           <p>
-            transitionは、transition-duration、transition-property、transition-timing-function、transition-delayの4つのプロパティに分けて指定できます。それぞれ のプロパティを個別に設定 することで、より細かい動きを表現することができ、以下のように記入する事ができます。
+            transitionは、transition-property、transition-duration、transition-timing-function、transition-delayの4つのプロパティに分けて設定できます。<br>それぞれのプロパティを個別に設定することで、より細かい動きを表現することができ、以下のように記入する事ができます。
           </p>
         </div>
         <div class="code-block">
           <div class="code-Wrap">
-            <p>4つのプロパティ</p>
+            <p>4つのプロパティを分割して使用する場合の記法</p>
 <pre>
 .blue-box {
   width: 100px;
   height: 100px;
   background-color: blue;
+  <span style="color: red;">transition-property: all;</span> <span style="opacity: .5;">/* アニメーションを適用するプロパティ（ここでは、変化する対象は全てとなります） */</span>
   <span style="color: red;">transition-duration: 1s;</span> <span style="opacity: .5;">/* アニメーションの時間（秒） */</span>
-  <span style="color: red;">transition-property: all;</span> <span style="opacity: .5;">/* アニメーションを適用するプロパティ（ここでは全てのプロパティ） */</span>
-  <span style="color: red;">transition-timing-function: ease-in-out;</span> <span style="opacity: .5;">/* アニメーションのタイミング関数 */</span>
+  <span style="color: red;">transition-timing-function: ease-in-out;</span> <span style="opacity: .5;">/* アニメーションのイージング関数 */</span>
   <span style="color: red;">transition-delay: 1s;</span> <span style="opacity: .5;">/* アニメーションの遅延（秒） */</span>
 }
 .blue-box:hover {
   width: 200px;
 }
 </pre>
-              <p>クラス名blue-boxにホバーした場合、1秒後に幅が200pxに変化します。この変化に1秒かけて、全てのプロパティがease-in-outというタイミング関数でアニメーションされます。</p>
+              <p>クラス名blue-boxにホバーした場合、1秒後に幅が200pxに変化します。この変化に1秒かけて、全てのプロパティがease-in-outというイージング関数でアニメーションされます。</p>
             <div>
               <div class="blue-box move_02"></div>
             </div>
           </div>
 
           <div class="code-Wrap">
-            <p>transitionのみ（ひとまとめ）</p>
+            <p>transitionのみ使用して、ひとまとめにした記法</p>
 <pre>
 .blue-box {
   width: 100px;
   height: 100px;
   background-color: blue;
-  <span style="color: red;">transition: all 1s ease-in-out 1s;</span> <span style="opacity: .5;">/* ※transitionのプロパティの順番を間違えないように注意 */</span>
+  <span style="color: red;">transition: all 1s ease-in-out 1s;</span> <span style="opacity: .5;">/* ※transition-property、transition-duration、のプロパティの順番を間違えないように注意 */</span>
 }
 .blue-box:hover {
   width: 200px;
 }
 </pre>
-              <p>4つのtransitionプロパティをひとまとめに書くとこうなります。<br>transition: all 1s ease-in-out 1s; transition-property(all)、transition-duration(1s)、transition-timing-function(ease-in-out)、transition-delay(1s) の順番で記述します。</p>
+              <p>4つのtransitionプロパティをひとまとめに書くとこのようになります。<br><span style="color: red;">transition: all 1s ease-in-out 1s;</span> <br>transition-property(all)、transition-duration(1s)、transition-timing-function(ease-in-out)、transition-delay(1s) の順番で記述しています。</p>
             <div>
               <div class="blue-box move_03"></div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="propertyType">
+        <table>
+          <thead>
+            <tr><th class="property name">プロパティ名</th><th class="property read">読み方</th><th class="property explanation">説明</th></tr>
+          </thead>
+          <tbady>
+            <tr><td>transition-property</td><td>トランジション・プロパティ</td><td>変化が適用される CSS のプロパティを指定します。</td></tr>
+            <tr><td>transition-duration</td><td>トランジション・デュレーション</td><td>変化が始まって終わるまでの時間を指定します。</td></tr>
+            <tr><td>transition-timing-function</td><td>トランジション・タイミング・ファンクション</td><td>変化の度合いを指定します。</td></tr>
+            <tr><td>transition-delay</td><td>トランジション・ディレイ</td><td>変化が始まる時間を指定します。</td></tr>
+            <tr><td>transition</td><td>トランジション</td><td>上記の 4つのプロパティを一括で指定できる、ショートハンド・プロパティです。</td></tr>
+          </tbady>
+        </table>
+      </div>
+    </div>
+  </div>
 
+
+  <div class="coding-tips_block">
+    <h2>アニメーションのプロパティについて</h2>
+    <div class="coding-tips_blockinner">
+      <h3>CSS Animation</h3>
+      <p>
+        アニメーション: 複数の状態を指定して、時間経過とともに変化するアニメーションを作成できます。<br>CSS Transitionより細かい設定が可能なので、jQueryなどのJavaScriptを使うなく、CSSのみで実装することが可能になります。
+      </p>
+      <div class="focus">
+
+        <div class="explanation">
+          <p class="read">
+            <span>具体的には</span>
+            アニメーションを適用したい要素に対して、@keyframesを使って時間に応じた動作を定義し、複雑な動きを実現します。
+          </p>
+          <p>
+            <span>（例）基本的な記入方法</span>
+          </p>
+            <pre>
+動かしたい要素のセレクタ {
+  animation: アニメーションネーム 持続時間 イージング関数 遅延時間 繰り返し回数 方向;
+}
+
+@keyframes アニメーションネーム {
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+            </pre>
+          <p>
+            動かしたい要素のセレクタの中にanimationプロパティを指定します。<br>
+            その中でアニメーションネームとそれ以外のプロパティを設定します。<br>
+            次に、@keyframesルール内で、アニメーションネームとアニメーションの進行に関する細かい動作を定義します。
+          </p>
         </div>
 
+        <div class="code-block">
+          <div class="code-Wrap">
+
+            <p>
+              動かしたい要素に対して、アニメーションネーム：sampleAnm、持続時間：2.5s、イージング関数：linear、遅延時間：0s、を設定したものを実際に動かしてみると…（ページを再読み込みすると再現されます）
+            </p>
+<pre>
+.box {
+  margin-bottom: 10px;
+  background-color: #125585;
+  color: #fff;
+  animation: sampleAnm 2.5s linear 0s; //アニメーションネーム 持続時間 イージング関数 遅延時間
+  width: 360px;
+}
+
+@keyframes sampleAnm { //@keyframesにて、アニメーションネーム指定します。
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+</pre>            
+            <div class="timing-function">
+              <div class="box"><p>linear</p></div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
+      <div class="valueType">
+        <div class="read">
+          <h2>CSS TransitionとCSS Animationの共通で使えるイージング関数について</h2>
+          <p>各要素のホバーすると要素が動きます。<br>イージング関数の動き自体はCSS TransitionとCSS Animationを比べても変わりませんが、同じ値(value)を使用できる事がわかるかと思います。</p>
+        </div>
+        <table>
+          <thead>
+            <tr><th class="value name">値 (value)</th><th class="value-tra">transition-timing-function</th><th class="value-anm">animation-timing-function</th></tr>
+          </thead>
+          <tbady>
+            <tr>
+              <td>linear</td>
+              <td><div class="transition-box linear"><p>linear</p></div></td>
+              <td><div class="animation-box linear"><p>linear</p></div></td>
+            </tr>
+            <tr>
+              <td>ease</td>
+              <td><div class="transition-box ease"><p>ease</p></div></td>
+              <td><div class="animation-box ease"><p>ease</p></div></td>
+            </tr>
+            <tr>
+              <td>ease-in</td>
+              <td><div class="transition-box ease-in"><p>ease-in</p></div></td>
+              <td><div class="animation-box ease-in"><p>ease-in</p></div></td>
+            </tr>
+            <tr>
+              <td>ease-out</td>
+              <td><div class="transition-box ease-out"><p>ease-out</p></div></td>
+              <td><div class="animation-box ease-out"><p>ease-out</p></div></td>
+            </tr>
+            <tr>
+              <td>ease-in-out</td>
+              <td><div class="transition-box ease-in-out"><p>ease-in-out</p></div></td>
+              <td><div class="animation-box ease-in-out"><p>ease-in-out</p></div></td>
+            </tr>
+            <tr>
+              <td>step-start</td>
+              <td><div class="transition-box step-start"><p>step-start</p></div></td>
+              <td><div class="animation-box step-start"><p>step-start</p></div></td>
+            </tr>
+            <tr>
+              <td>step-end</td>
+              <td><div class="transition-box step-end"><p>step-end</p></div></td>
+              <td><div class="animation-box step-end"><p>step-end</p></div></td>
+            </tr>
+            <tr>
+              <td>steps-n-start</td>
+              <td><div class="transition-box steps-n-start"><p>steps-n-start</p></div></td>
+              <td><div class="animation-box steps-n-start"><p>steps-n-start</p></div></td>
+            </tr>
+            <tr>
+              <td>steps-n-end</td>
+              <td><div class="transition-box steps-n-end"><p>steps-n-end</p></div></td>
+              <td><div class="animation-box steps-n-end"><p>steps-n-end</p></div></td>
+            </tr>
+            <tr>
+              <td>cubic-bezier</td>
+              <td><div class="transition-box cubic-bezier"><p>cubic-bezier</p></div></td>
+              <td><div class="animation-box cubic-bezier"><p>cubic-bezier</p></div></td>
+            </tr>
+          </tbady>
+        </table>
+        <p>※その他の<a href="https://easings.net/ja">イージング関数</a></p>
+      </div>
     </div>
   </div>
 
   <div class="coding-tips_block">
-    <h2>アニメーションのプロパティについて</h2>
-    <div>
-      <h3>CSS Animation</h3>
-      <p>アニメーション: 複数の状態を指定して、時間経過とともに変化するアニメーションを作成できます。たとえば、要素が回転したり、移動したりするなど。</p>
-      
+    <h2>その他のプロパティについて</h2>
+    <div class="coding-tips_blockinner">
+      <h3>CSS Transform</h3>
+      <p>
+        <em>トランスフォームは、</em>要素を移動、変形や回転させることができるCSSプロパティです。単体で使用したり、CSS TransitionやCSS Animationと組み合わせたりすることで、複雑な動きや滑らかなアニメーションを実現できます。
+      </p>
+      <div class="focus">
+        <div class="explanation">
+          <p class="read">
+            <span>具体的には</span>
+            CSS TransitionやCSS Animationと組み合わせて使用するため以下のような記述になります。
+          </p>
+          <section>
+            <p>
+              <span>（例1）transformプロパティとの組み合わせ</span>
+            </p>
+            <pre>
+動かしたい要素のセレクタ {
+  transition: transform（またはall） 0.3s ease; <span style="opacity: .5;">/* transformプロパティの変化をアニメーション化 */</span>
+}
+
+動かしたい要素のセレクタ:hover {
+  transform: rotate(45deg) scale(1.2); <span style="opacity: .5;">/* マウスホバー時のアニメーション設定 */</span>
+}
+            </pre>
+            <p>
+              要素をマウスカーソルで覆った際に変化させたい場合、擬似クラス(:hover) に対し transformプロパティ内で rotate や scale を設定し、動かしたい要素のセレクタに transition プロパティを設定します。<br>
+              transition プロパティは、要素の状態が変化する際のアニメーションを定義します。アニメーションの対象（ここではtransform）、時間、タイミングなどを指定することで、滑らかな動きを実現できます。
+            </p>
+          </section>
+
+          <section>
+            <p>
+              <span>（例2）animationプロパティとの組み合わせ</span>
+            </p>
+            <pre>
+動かしたい要素のセレクタ:hover {
+  animation: fadeawayAnime 2s ease; <span style="opacity: .5;">/* マウスホバー時のアニメーション設定 */</span>
+}
+
+@keyframes fadeawayAnime{
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.08, 1.08); <span style="opacity: .5;">/* アニメーションの進み具合によって、transformを使い要素の形状を変化させる */</span>
+  }
+  50% {
+    transform: scale(1, 1); 
+  }
+  100% {
+    opacity: 0; 
+  }
+}
+            </pre>
+            <p>
+              hoverで動く場合、animationプロパティは擬似セレクタにanimationプロパティにアニメーションネームやアニメーションに掛かる時間、イージング関数などを書きます。
+            </p>
+          </section>
+        </div>
+
+        <div class="code-block">
+          <div class="code-Wrap">
+            <pre>
+.tran-anim .box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition: transform（またはall） 0.3s ease;</span> <span style="opacity: .5;">/* transition内のvalueにtransformで設定したものとアニメーションにかかる時間とイージング関数 */</span>
+}
+
+.tran-anim .box:hover {
+  <span style="color: red;">transform: rotate(45deg) scale(1.2);</span> <span style="opacity: .5;">/* transform内のvalueは45°回転と1.2倍に拡大 */</span>
+}
+            </pre>
+            <p>transformプロパティを追加する事で動きに幅が広がります。</p>
+            <div class="transition-anime">
+              <div class="box"></div>
+            </div>
+          </div>
+          <div class="code-Wrap">
+            <pre>
+.keyframes-anime .box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.keyframes-anime .box:hover {
+  animation: fadeawayAnime 2s ease;
+}
+
+@keyframes fadeawayAnime{
+  0% {
+    <span style="color: red;">transform: scale(1, 1);</span> <span style="opacity: .5;">/* @keyframes0%の時、大きさはそのまま */</span>
+  }
+  25% {
+    <span style="color: red;">transform: scale(1.08, 1.08);</span> <span style="opacity: .5;">/* @keyframes25%の時、少しだけ大きくなります */</span>
+  }
+  50% {
+    <span style="color: red;">transform: scale(1, 1);</span> <span style="opacity: .5;">/* @keyframes50%の時、下の大きさに戻ります */</span>
+  }
+  100% {
+    opacity: 0; <span style="opacity: .5;">/* そしてそのまま、スッと消えるアニメーションを、2秒かけてeaseで再現 */</span>
+  }
+}
+            </pre>
+            <p>@keyframesやイージング関数、経過時間を使用する事で動きを細かく設定する事が出来ます。</p>
+            <div class="keyframes-anime">
+              <div class="box"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
-
-
-
 </div>
-
-
 </section>
-
 </main>
 </body>
 </html>
