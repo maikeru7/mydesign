@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>html・CSS コーディング</title>
+<title>html・CSS コーディング：グラデーション</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css" integrity="sha256-/jO/fTJ0k1OjSZEq6mnys4V6x6RG6MVJv34CFHWv0To=" crossorigin="anonymous">
 <link rel="stylesheet" href="css/contents.css">
 </head>
@@ -35,7 +35,7 @@
             </p>
             <pre>
 グラデーションを掛けたい要素のセレクタ {
-  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); <span style="opacity: .5;">/* 0%：#cd9cf2、100%：#f6f3ff、下から上に向かっていくグラデーション */</span>
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); <span style="opacity: .5;">/* 0%: #cd9cf2、100%: #f6f3ff、下から上に向かって変化していくグラデーション */</span>
 }
             </pre>
 
@@ -45,7 +45,7 @@
           <div class="code-Wrap ver2">
 
             <p>
-              基本的なグラデーションの方向や色数を変えたもをそれぞれ記載しています。
+              基本的なグラデーションの角度や色数を変えたもをそれぞれ記載しています。
             </p>
 
             <pre>
@@ -56,23 +56,158 @@
   background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
 }
 .box.gradecolor3 {
-  background: linear-gradient(to right, #f78ca0 0%, #f9748f 20%, #fd868c 60%, #fe9a8b 100%);
+  background: linear-gradient(to right, #f78ca0 0%, #f9748f 20%, #fd868c 60%, #fe9a8b 100%); <span style="opacity: .5;">/* 0% から 20%、20% から 60%、60% から 100% と左から右に向かって変化していくグラデーション */</span>
+}
+.box.gradecolor4 {
+  background: linear-gradient(to bottom, #6fb8d9 0% 30%, #f4c14e 40% 70%, #d36950 80% 100%);
 }
             </pre>
             <div class="boxwrap">
               <div class="box gradecolor1"></div>
               <div class="box gradecolor2"></div>
               <div class="box gradecolor3"></div>
+              <div class="box gradecolor4"></div>
             </div>
           </div>
         </div>
+        <div class="notice">
+          <header>
+            <h3>グラデーションの角度指定の注意点</h3>
+            <p>linear-gradientを角度なしで色のみで設定した場合(例：linear-gradient(#f00, #00f))、#f00が上に#00fが下にきます。</p>
+            <p>linear-gradientを角度指定を0°にした場合(例：linear-gradient(0deg, #f00, #00f))、角度を指定していない状態から、角度0°を指定するので、色の配置は反転し上下逆になります。</p>
+          </header>
+          <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="vYwONxM" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/vYwONxM">
+            Untitled</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+
+        </div>
       </div>
     </div>
+  </div>
 
-</div>
+  <div class="codepen-sample mb40">
+    <header>
+      <h2>グラデーションの使い方</h2>
+      <p>linear-gradientを使用することで、複雑な配色が可能になります。これにより、デザインからコーディングに作業が移行する際、CSSによる再現性が高まり、画像を切り出す作業が軽減されます。</p>
+    </header>
+    <div class="codepen-sampleWrap">
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QWRbbVW" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/QWRbbVW">
+          グラデーションパターン01</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>(linear-gradient(#111 0%, #111 50%, #cb0000 50%, #cb0000 100%))は、開始点（0%）から（50%）までの色（#111）を決め、次に（50%）から（100%）までの色（#cb0000）を決めることで、範囲を明確に区別し、双方の色がグラデーションすることなく境界線を作成することができます。</p>
+          <p>WEBサイト全体の背景色を2色に分けたい時や、今まで画像の切り出しが必要だった2色以上使う装飾などはcssで可能になります。</p>
+        </article>
+      </div>
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGydePq" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/bGydePq">
+          Untitled</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>linear-gradientは、画像のURLを指定するだけで画像の上にグラデーションを描画する事が出来ます。</p>
+          <p>通常時linear-gradientとhover時のlinear-gradientを用意すれば、ホバー時に切り替えることが出来たり、キーフレームを使う事で経過時間に応じてグラデーションの色を変える事も可能です</p>
+        </article>
+      </div>
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJYVRZO" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/OJYVRZO">
+          Untitled</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>フリーグラデーションを作りたい場合、使用する色数分のdivを用意しそれを一つのdivで囲みます。各要素(div)に対しサイズや位置、色を設定し、filter: blur(設定値);を使用し各要素をぼかすことで、フリーグラデーションを作る事が出来ます。</p>
+        </article>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="codepen-sample mb40">
+    <header>
+      <h2>グラデーションの繰り返し処理について</h2>
+      <p>repeating-linear-gradientを使用することで、グラデーションの繰り返し処理を実現できます。linear-gradientと同様に、設定によってはCSSだけで再現可能なものも増えていますので、画像を切り出す作業を省略し、CSSのみで制作からメンテナンスまで行うことができます。</p>
+    </header>
+    <div class="codepen-sampleWrap">
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="pomJZQr" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/pomJZQr">
+          グラデーションの繰り返し処理</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+      </div>
+
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="gOJpdbr" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/gOJpdbr">
+          グラデーションの繰り返し処理（その2）</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="codepen-sample">
+    <header>
+      <h2>アニメーションを併用したグラデーションの表現方法について</h2>
+      <p>CSSのアニメーションを使用してグラデーションの繰り返し処理を制御し、背景色を動かすギミックを紹介します。</p>
+    </header>
+    <div class="codepen-sampleWrap">
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GRaJwwR" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/GRaJwwR">
+          アニメーションと合わせるグラデーション（下準備その1）</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>1）サイトデザインを確認しながら、htmlを組みcssをあてます。</p>
+        </article>
+      </div>
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ExzjOze" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/ExzjOze">
+          アニメーションと合わせるグラデーション（下準備その2）</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>2）次にギミックの対象となる文字に対しcssをあてます。</p>
+          <p>company-details 内の header.company-details_title にbackgroundの設定を行います</p>
+        </article>
+      </div>
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwmPELR" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/RwmPELR">
+          Untitled</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>3）次にギミックの対象となる文字に対しanimationと@keyframesを追加します。</p>
+        </article>
+      </div>
+      <div class="codepen-sampleWrap_sec">
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBGdyWx" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/qBGdyWx">
+          アニメーションと合わせるグラデーション</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <article>
+          <p>4）background-imageで設定したものと文字が重なっている部分のみを表示させ、文字色を透明にしたら完成。</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 </section>
-</main>  
+</main>
+
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
