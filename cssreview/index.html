@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta name="robots" content="noindex"><!--納品前に削除-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS REVIEW</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/remodal@1.1.1/dist/remodal.min.js" integrity="sha256-tR7fz2fCeycqI9/V8mL9nyTc4lI14kg2Qm6zZHuupxE=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remodal@1.1.1/dist/remodal-default-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remodal@1.1.1/dist/remodal.min.css">
+  <script src="https://www.muji.net/camp/js/outdoor_school.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css" integrity="sha256-/jO/fTJ0k1OjSZEq6mnys4V6x6RG6MVJv34CFHWv0To=" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section id="mainVisual">
+      <div class="mv-ttl">
+        <h1 id="target" class="lg-en_mainttl">
+          <div>CSS</div>
+          <div>REVIEW</div>
+        </h1>
+      </div>
+    </section>
+
+    <section id="main-contents">
+      <section id="contents-wrapper" class="css-details">
+
+        <div class="css-details_tips">
+          <figure>
+            <img src="assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
+            <figcaption>
+              <h2>トランジションプロパティ基本のき<br>（その1）</h2>
+              <h3 class="lg-en">CSS - Transition</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal1" class="js_modalButton" data-remodal-target="modal1">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- <div class="css-details_tips">
+          <figure>
+            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <figcaption>
+              <h2>トランジションのプロパティについて</h2>
+              <h3 class="lg-en">CSS Transition</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips">
+          <figure>
+            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <figcaption>
+              <h2>トランジションのプロパティについて</h2>
+              <h3 class="lg-en">CSS Transition</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips">
+          <figure>
+            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <figcaption>
+              <h2>トランジションのプロパティについて</h2>
+              <h3 class="lg-en">CSS Transition</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips">
+          <figure>
+            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <figcaption>
+              <h2>トランジションのプロパティについて</h2>
+              <h3 class="lg-en">CSS Transition</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div> -->
+      </section>
+    </section>
+
+  </main>
+
+<footer></footer>
+
+  <section>
+
+    <div id="modal1_popup" class="remodal modal-content" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
+      <section class="school-infomaiton modal-content_wrap">
+        <!-- ここにコンテンツを配置 -->
+        <div class="inner-content" id="cssTransition">
+          <section id="cssAnim" class="coding-tips">
+            <div class="coding-tips_wrap">
+              <div class="header">
+                <h1>CSSのみで構成するアニメーション</h1>
+              </div>
+
+              <div class="coding-tips_block">
+                <h2>トランジションプロパティ基本のき（その1）</h2>
+                <div class="coding-tips_blockinner">
+                  <h3 class="lg-en">CSS - Transition</h3>
+                  <p>
+                    <em>トランジションとは、</em>要素の1つの状態から別の状態への変化を滑らかにするために使用されるCSSプロパティです。<br>
+                    アニメーションで使用させる場合は、一般的に、マウスを要素に重ねる（ホバーする）などのユーザーのアクションに応じて、要素の特定の属性（例：色、サイズ、位置など）が変化する場合、特にボタンなどに利用される事が多いです。<br>
+                    具体的な使用例として、ボタンの色がマウスがホバーされたときに変化するように設定することができます。<br>
+                    以下に簡単な例を示します。
+                  </p>
+
+                  <div class="focus">
+                    <div class="explanation">
+                      <p class="read">
+                        <span>具体的には</span>
+                        クラス名blue-boxに対し大きさと色を決め、次にホバー後に一部数値（今回はwidth）を変化させるコードを二つ用意し比較し動きの違いを確認します。
+                      </p>
+                      <p class="concrete">
+                        <span>（例）トランジション有りと無しの比較</span>
+                        一つはクラス名blue-boxに対し、transitionが無いものを、もう一つはtransitionがあるものを用意し比較してみます。<br>
+                        両方ともホバー後にwidthが100pxから100%に変化します。<br>
+                        トランジションがない場合はホバーをすると瞬時に指定された幅に変化するのに対し、トランジションの設定があるものはtransitionで指定した通り滑らかに変化します。
+                      </p>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p>トランジション無し</p>
+<pre class="lg-en">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box:hover {
+  width: 100%;
+}
+</pre>
+                        <div>
+                          <div class="blue-box unmove"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p>トランジション有り</p>
+<pre class="lg-en">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition: all 1s ease-in-out;</span> <span style="opacity: .5;">/* transitionのプロパティに対し、時間と動きの値を入れるだけ */</span>
+}
+.blue-box:hover {
+  width: 100%;
+}
+</pre>
+                        <div>
+                          <div class="blue-box move"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="focus">
+                    <div class="explanation">
+                      <p class="read">
+                        <span>transitionプロパティ (transition: all 1s ease-in-out;) について</span>
+                      </p>
+                      <p class="concrete">
+                        ホバー後にwidthが100pxから100%に変化するtransitionプロパティについて解説します。<br>
+                        transitionに対し実際にどのような設定を行ったかというと、クラス名blue-box全体 (all) に対し、1秒かけてease-in-outという種類のイージング（動きの加減速）で動かすという設定になります。<br>
+                        参考サイト：<a href="https://ics.media/entry/18730/">ICS MEDIA「CSSイージングのお手本- ease-out, ease-in, linearの使い分け」</a>
+                      </p>
+                      <p class="concrete">
+                        transitionプロパティは、下記の表のように細かく分類する事ができ、用途によって使い分けることができます。
+                      </p>
+                    </div>
+
+                    <div class="propertyType">
+                      <table>
+                        <thead>
+                          <tr><th class="prop-name">プロパティ名</th><th class="prop-read">読み方</th><th class="prop-exp">説明</th></tr>
+                        </thead>
+                        <tbady>
+                          <tr><td>transition-property</td><td>トランジション・プロパティ</td><td>変化が適用される CSS のプロパティを指定します。<br><span class="annotation">※ 背景色や文字色などの限定的なものから要素全て (all) などの指定をおこないます。</span></td></tr>
+                          <tr><td>transition-duration</td><td>トランジション・デュレーション</td><td>変化が始まって終わるまでの時間を指定します。</td></tr>
+                          <tr><td>transition-timing-function</td><td>トランジション・タイミング・ファンクション</td><td>変化の度合いを指定します。<br><span class="annotation">※ イージング関数によって動きに変化をくわえます。</span></td></tr>
+                          <tr><td>transition-delay</td><td>トランジション・ディレイ</td><td>変化が始まる遅延時間を指定します。</td></tr>
+                          <tr><td>transition</td><td>トランジション</td><td>上記の 4つのプロパティを一括で指定できる、ショートハンド・プロパティです。</td></tr>
+                        </tbady>
+                      </table>
+                      <p>参考サイト：<a href="https://www.asobou.co.jp/blog/web/css-animation3">株式会社アーティス「手軽なCSSアニメーション！transitionプロパティの使い方（基礎編）」</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- coding-tips_block -->
+
+
+              <div class="coding-tips_block">
+                <div class="valueType">
+                  <div class="read">
+                    <h2>イージング関数の種類について</h2>
+                    <p>各要素のホバーすると要素が動きます。<br>イージング関数の値(value)はTransitionプロパティとAnimationプロパティの両方で共通しています。</p>
+                    <p>ホバーしたときのパラメーターの変化率は同じですが、ホバーを外したときの動きにはTransitionプロパティとAnimationプロパティで若干の違いがあります。特に、Animationプロパティの場合はその違い使用用途を考慮して記述する必要があります。</p>
+                  </div>
+
+                  <div class="valueType_detail">
+                    <table>
+                      <thead>
+                        <tr><th class="value-name">値 (value)</th><th class="value-tra">transition-timing-function</th><th class="value-anm">animation-timing-function</th></tr>
+                      </thead>
+                      <tbady>
+                        <tr>
+                          <td>linear</td>
+                          <td><div class="transition-box linear"><p>linear</p></div></td>
+                          <td><div class="animation-box linear"><p>linear</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>ease</td>
+                          <td><div class="transition-box ease"><p>ease</p></div></td>
+                          <td><div class="animation-box ease"><p>ease</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>ease-in</td>
+                          <td><div class="transition-box ease-in"><p>ease-in</p></div></td>
+                          <td><div class="animation-box ease-in"><p>ease-in</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>ease-out</td>
+                          <td><div class="transition-box ease-out"><p>ease-out</p></div></td>
+                          <td><div class="animation-box ease-out"><p>ease-out</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>ease-in-out</td>
+                          <td><div class="transition-box ease-in-out"><p>ease-in-out</p></div></td>
+                          <td><div class="animation-box ease-in-out"><p>ease-in-out</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>step-start</td>
+                          <td><div class="transition-box step-start"><p>step-start</p></div></td>
+                          <td><div class="animation-box step-start"><p>step-start</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>step-end</td>
+                          <td><div class="transition-box step-end"><p>step-end</p></div></td>
+                          <td><div class="animation-box step-end"><p>step-end</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>steps-n-start</td>
+                          <td><div class="transition-box steps-n-start"><p>steps-n-start</p></div></td>
+                          <td><div class="animation-box steps-n-start"><p>steps-n-start</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>steps-n-end</td>
+                          <td><div class="transition-box steps-n-end"><p>steps-n-end</p></div></td>
+                          <td><div class="animation-box steps-n-end"><p>steps-n-end</p></div></td>
+                        </tr>
+                        <tr>
+                          <td>cubic-bezier</td>
+                          <td><div class="transition-box cubic-bezier"><p>cubic-bezier</p></div></td>
+                          <td><div class="animation-box cubic-bezier"><p>cubic-bezier</p></div></td>
+                        </tr>
+                      </tbady>
+                    </table>
+                    <p>参考サイト：<a href="https://easings.net/ja">イージング関数</a></p>
+                  </div>
+                </div>
+              </div> <!-- coding-tips_block -->
+            </div><!-- coding-tips_wrap -->
+          </section>
+        </div>
+      </section>
+      <button class="remodal-close initial-data" data-remodal-action="close">close</button>
+    </div><!-- modal1_popup -->
+  </section><!-- モーダル画面エリア 終了 -->
+
+<script src="assets/js/contents.js"></script>
+</body>
+</html>
