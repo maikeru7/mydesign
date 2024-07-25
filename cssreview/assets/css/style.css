@@ -458,6 +458,7 @@ html.remodal-is-locked {
 
 /*propertyType/valueType*/
 .propertyType, .valueType_detail {
+  margin-bottom: 1rem;
   padding: 0;
   overflow-x: scroll;
 }

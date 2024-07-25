@@ -49,8 +49,8 @@
           <figure>
             <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
             <figcaption>
-              <h2>トランジションのプロパティについて</h2>
-              <h3 class="lg-en">CSS Transition</h3>
+              <h2>トランジションプロパティ基本のき<br>（その2）</h2>
+              <h3 class="lg-en">CSS - Transition</h3>
               <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
               <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
             </figcaption>
@@ -182,8 +182,7 @@
                         <span>transitionプロパティ (transition: all 1s ease-in-out;) について</span>
                       </p>
                       <p class="concrete">
-                        ホバー後にwidthが100pxから100%に変化するtransitionプロパティについて解説します。<br>
-                        transitionに対し実際にどのような設定を行ったかというと、クラス名blue-box全体 (all) に対し、1秒かけてease-in-outという種類のイージング（動きの加減速）で動かすという設定になります。<br>
+                        ホバー後にwidthが100pxから100%に変化するtransitionプロパティに対し実際にどのような設定を行ったかというと、クラス名blue-box全体 (all) に対し、1秒かけてease-in-outという種類のイージング（動きの加減速）で動かすという設定になります。<br>
                         参考サイト：<a href="https://ics.media/entry/18730/">ICS MEDIA「CSSイージングのお手本- ease-out, ease-in, linearの使い分け」</a>
                       </p>
                       <p class="concrete">
@@ -206,6 +205,31 @@
                       </table>
                       <p>参考サイト：<a href="https://www.asobou.co.jp/blog/web/css-animation3">株式会社アーティス「手軽なCSSアニメーション！transitionプロパティの使い方（基礎編）」</a></p>
                     </div>
+
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p>トランジション有りを分割した記法</p>
+<pre class="lg-en">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span style="color: red;">transition-property: all;</span> <span style="opacity: .5;">/* アニメーションを適用するプロパティ（ここでは、変化する対象は全てとなります） */</span>
+  <span style="color: red;">transition-duration: 1s;</span> <span style="opacity: .5;">/* アニメーションの時間（秒） */</span>
+  <span style="color: red;">transition-timing-function: ease-in-out;</span> <span style="opacity: .5;">/* アニメーションのイージング関数 */</span>
+}
+.blue-box:hover {
+  width: 100%;
+}
+</pre>
+                        <div>
+                          <div class="blue-box move"></div>
+                        </div>
+                      </div>
+                    </div>
+
+
                   </div>
                 </div>
               </div> <!-- coding-tips_block -->
@@ -287,6 +311,16 @@
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal1_popup -->
+
+
+    <div id="modal2_popup" class="remodal modal-content" data-remodal-id="modal2" data-remodal-options="hashTracking: false">
+      <section class="school-infomaiton modal-content_wrap">
+
+      </section>
+      <button class="remodal-close initial-data" data-remodal-action="close">close</button>
+    </div><!-- modal2_popup -->
+
+
   </section><!-- モーダル画面エリア 終了 -->
 
 <script src="assets/js/contents.js"></script>
