@@ -144,6 +144,93 @@ body {
   padding: 0;
   height: 100vh;
 }
+footer {
+  width: 100%;
+  height: 100px;
+  background: #a3a3a3;
+}
+/*UTILITY*/
+@media only screen and (min-width: 768px) {
+  .mt5 { margin-top: 5px; }
+  .mt10 { margin-top: 10px; }
+  .mt15 { margin-top: 15px; }
+  .mt20 { margin-top: 20px; }
+  .mt25 { margin-top: 25px; }
+  .mt30 { margin-top: 30px; }
+  .mt35 { margin-top: 35px; }
+  .mt40 { margin-top: 40px; }
+  .mt45 { margin-top: 45px; }
+  .mt50 { margin-top: 50px; }
+  .mt60 { margin-top: 60px; }
+  .mt70 { margin-top: 70px; }
+  .mt80 { margin-top: 80px; }
+  .mb10 { margin-bottom: 10px; }
+  .mb15 { margin-bottom: 15px; }
+  .mb20 { margin-bottom: 20px; }
+  .mb25 { margin-bottom: 25px; }
+  .mb30 { margin-bottom: 30px; }
+  .mb35 { margin-bottom: 35px; }
+  .mb40 { margin-bottom: 40px; }
+  .mb45 { margin-bottom: 45px; }
+  .mb50 { margin-bottom: 50px; }
+  .pt10 { padding-top: 10px; }
+  .pt15 { padding-top: 15px; }
+  .pt20 { padding-top: 20px; }
+  .pt30 { padding-top: 30px; }
+  .pt40 { padding-top: 40px; }
+  .pt50 { padding-top: 50px; }
+  .pb10 { padding-bottom: 10px; }
+  .pb15 { padding-bottom: 15px; }
+  .pb20 { padding-bottom: 20px; }
+  .pb25 { padding-bottom: 25px; }
+  .pb30 { padding-bottom: 30px; }
+  .pb40 { padding-bottom: 40px; }
+  .pb50 { padding-bottom: 50px; }
+  .pb60 { padding-bottom: 60px; }
+  .pb70 { padding-bottom: 70px; }
+  .pb80 { padding-bottom: 80px; }
+}
+@media only screen and (max-width: 767px) {
+  .mt5_sp { margin-top: 5px; }
+  .mt10_sp { margin-top: 10px; }
+  .mt15_sp { margin-top: 15px; }
+  .mt20_sp { margin-top: 20px; }
+  .mt25_sp { margin-top: 25px; }
+  .mt30_sp { margin-top: 30px; }
+  .mt35_sp { margin-top: 35px; }
+  .mt40_sp { margin-top: 40px; }
+  .mt45_sp { margin-top: 45px; }
+  .mt50_sp { margin-top: 50px; }
+  .mt60_sp { margin-top: 60px; }
+  .mt70_sp { margin-top: 70px; }
+  .mt80_sp { margin-top: 80px; }
+  .mb10_sp { margin-bottom: 10px; }
+  .mb15_sp { margin-bottom: 15px; }
+  .mb20_sp { margin-bottom: 20px; }
+  .mb25_sp { margin-bottom: 25px; }
+  .mb30_sp { margin-bottom: 30px; }
+  .mb35_sp { margin-bottom: 35px; }
+  .mb40_sp { margin-bottom: 40px; }
+  .mb45_sp { margin-bottom: 45px; }
+  .mb50_sp { margin-bottom: 50px; }
+  .pt10_sp { padding-top: 10px; }
+  .pt15_sp { padding-top: 15px; }
+  .pt20_sp { padding-top: 20px; }
+  .pt30_sp { padding-top: 30px; }
+  .pt40_sp { padding-top: 40px; }
+  .pt50_sp { padding-top: 50px; }
+  .pb10_sp { padding-bottom: 10px; }
+  .pb15_sp { padding-bottom: 15px; }
+  .pb20_sp { padding-bottom: 20px; }
+  .pb25_sp { padding-bottom: 25px; }
+  .pb30_sp { padding-bottom: 30px; }
+  .pb40_sp { padding-bottom: 40px; }
+  .pb50_sp { padding-bottom: 50px; }
+  .pb60_sp { padding-bottom: 60px; }
+  .pb70_sp { padding-bottom: 70px; }
+  .pb80_sp { padding-bottom: 80px; }
+}
+/*UTILITY*/
 /*
 GENERAL STYLING
 ======================= */
@@ -164,11 +251,15 @@ h2 {
 h3 {
   font-size: var(--base-size_1q);
 }
-p, pre {
-  line-height: 1.8;
+p {
+  line-height: 1.5;
   font-size: var(--base-size_1);
   letter-spacing: .01em;
 }
+pre {
+  @extend p;
+}
+
 em {
   font-style: normal;
 }
@@ -231,9 +322,7 @@ main {
   }
 }
 
-#main-contents {
-  // height: 70vh;
-}
+
 .css-details {
   display: var(--dsp-flex);
   flex-wrap: wrap;
@@ -362,15 +451,12 @@ html {
     }
   }
 }
-
-
 .inner-content {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem;
   text-align:left;
 }
-
 .coding-tips {
   &_wrap {
     width: 90%;
@@ -401,7 +487,6 @@ html {
     }
   }
 }
-
 .focus {
   margin: 1rem auto 0;
   .explanation {
@@ -425,7 +510,6 @@ html {
     }
   }
 }
-
 .code-block {
   background-color:var(--color-val_f4f4f4);
   padding: 1rem;
@@ -436,18 +520,23 @@ html {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
 .code-Wrap {
   width: 100%;
-  p {
-    margin-bottom: .5rem;
-    font-weight: bold;
-  }
-  pre {
-    margin-bottom: 1rem;
-    padding: .5rem;
-    background-color:var(--color-val_d7d7d7);
-  }
 }
+
+p {
+  margin-bottom: 0.5rem;
+}
+p.em {
+  font-weight: bold;
+}
+pre {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-val_d7d7d7);
+}
+
 .blue-box {
   &.unmove {
     width: 100px;
@@ -488,7 +577,6 @@ html {
     }
   }
 }
-
 
 /*propertyType/valueType*/
 .propertyType {
@@ -609,68 +697,143 @@ html {
 }
 
 /***timing-function***/
-.transition-box.linear{
-  transition-timing-function: linear;
+.transition-box {
+  &.linear{
+    transition-timing-function: linear;
+  }
+  &.ease{
+    transition-timing-function: ease;
+  }
+  &.ease-in{
+    transition-timing-function: ease-in;
+  }
+  &.ease-out{
+    transition-timing-function: ease-out;
+  }
+  &.ease-in-out{
+    transition-timing-function: ease-in-out;
+  }
+  &.step-start{
+    transition-timing-function: step-start;
+  }
+  &.step-end{
+    transition-timing-function: step-end;
+  }
+  &.cubic-bezier{
+    transition-timing-function: cubic-bezier(.37,-0.41,.82,1.46);
+  }
+  &.steps-n-start{
+    transition-timing-function: steps(4, start);
+  }
+  &.steps-n-end{
+    transition-timing-function: steps(4, end);
+  }
 }
-.transition-box.ease{
-  transition-timing-function: ease;
-}
-.transition-box.ease-in{
-  transition-timing-function: ease-in;
-}
-.transition-box.ease-out{
-  transition-timing-function: ease-out;
-}
-.transition-box.ease-in-out{
-  transition-timing-function: ease-in-out;
-}
-.transition-box.step-start{
-  transition-timing-function: step-start;
-}
-.transition-box.step-end{
-  transition-timing-function: step-end;
-}
-.transition-box.cubic-bezier{
-  transition-timing-function: cubic-bezier(.37,-0.41,.82,1.46);
-}
-.transition-box.steps-n-start{
-  transition-timing-function: steps(4, start);
-}
-.transition-box.steps-n-end{
-  transition-timing-function: steps(4, end);
-}
+.animation-box{
+  &.linear{
+    animation-timing-function: linear;
+  }
+  &.ease{
+    animation-timing-function: ease;
+  }
+  &.ease-in{
+    animation-timing-function: ease-in;
+  }
+  &.ease-out{
+    animation-timing-function: ease-out;
+  }
+  &.ease-in-out{
+    animation-timing-function: ease-in-out;
+  }
+  &.step-start{
+    animation-timing-function: step-start;
+  }
+  &.step-end{
+    animation-timing-function: step-end;
+  }
+  &.steps-n-start{
+    animation-timing-function: steps(4, start);
+  }
+  &.steps-n-end{
+    animation-timing-function: steps(4, end);
+  }
+  &.cubic-bezier{
+    animation-timing-function: cubic-bezier(.37,-0.41,.82,1.46);
+  }
+}/***timing-function***/
 
-.animation-box.linear{
-  animation-timing-function: linear;
+/* #cssTransition-02 */
+#cssTransition-02 {
+  .blue-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+}/* .blue-box 定義 */
+
+.parent-box {
+  height: 100px;
+  position: relative;
 }
-.animation-box.ease{
-  animation-timing-function: ease;
+.blue-box {
+  &.tra-left-move {
+    position: absolute;
+    left: 0;
+    transition-property: left;
+    transition-duration: 1s;
+    &:hover {
+      left: 100px;
+    }
+  }
+  &.tra-show-hide {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &.tra-exp {
+    transition-property: width, height;
+    transition-duration: 0.5s, 0.5s;
+    &:hover {
+      width: 200px !important;
+      height: 200px !important;
+    }
+  }
+  &.tra-color {
+    transition-property: background-color;
+    transition-duration: 1s;
+    &:hover {
+      background-color: red !important;
+    }
+  }
+  &.tra-shape {
+    transition-property: border-radius;
+    transition-duration: 0.5s;
+    &:hover {
+      border-radius: 50%;
+    }
+  }
 }
-.animation-box.ease-in{
-  animation-timing-function: ease-in;
+.tra-txt-color {
+  color: black;
+  transition: color 0.3s;
+  &:hover {
+    color: yellow;
+  }
 }
-.animation-box.ease-out{
-  animation-timing-function: ease-out;
+.tra-txt-fontsize {
+  color: black;
+  font-size: 16px;
+  transition: font-size 0.5s;
+  &:hover {
+    font-size: 24px;
+  }
 }
-.animation-box.ease-in-out{
-  animation-timing-function: ease-in-out;
-}
-.animation-box.step-start{
-  animation-timing-function: step-start;
-}
-.animation-box.step-end{
-  animation-timing-function: step-end;
-}
-.animation-box.steps-n-start{
-  animation-timing-function: steps(4, start);
-}
-.animation-box.steps-n-end{
-  animation-timing-function: steps(4, end);
-}
-.animation-box.cubic-bezier{
-  animation-timing-function: cubic-bezier(.37,-0.41,.82,1.46);
-}
-/***timing-function***/
+/* #cssTransition-02 */
+
+
 
 
 .transition-anime {
@@ -709,10 +872,5 @@ html {
   }
 }
 
-footer {
-  width: 100vw;
-  height: 100px;
-  background: #a3a3a3;
-}
 
 

@@ -37,10 +37,22 @@
           <figure>
             <img src="assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
             <figcaption>
-              <h2>トランジションプロパティ基本のき<br>（その1）</h2>
-              <h3 class="lg-en">CSS - Transition</h3>
+              <h2>トランジションプロパティ基本のき</h2>
+              <h3><span class="lg-en">CSS - Transition</span> 基本的な使用方法について</h3>
               <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
               <a id="modal1" class="js_modalButton" data-remodal-target="modal1">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips">
+          <figure>
+            <img src="assets/img/bnr_02.png" alt="CSS Transition によるアニメーションについて">
+            <figcaption>
+              <h2>トランジションプロパティ応用編</h2>
+              <h3><span class="lg-en">CSS - Transition</span> 様々な動きについて</h3>
+              <p>マウスを要素に重ねる（ホバーする）以外にも様々なアクションに応じて要素を変化させる事が...</p>
+              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
             </figcaption>
           </figure>
         </div>
@@ -49,18 +61,6 @@
           <figure>
             <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
             <figcaption>
-              <h2>トランジションプロパティ基本のき<br>（その2）</h2>
-              <h3 class="lg-en">CSS - Transition</h3>
-              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
-              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="css-details_tips">
-          <figure>
-            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
-            <figcaption>
               <h2>トランジションのプロパティについて</h2>
               <h3 class="lg-en">CSS Transition</h3>
               <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
@@ -76,7 +76,7 @@
               <h2>トランジションのプロパティについて</h2>
               <h3 class="lg-en">CSS Transition</h3>
               <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
-              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
+              <a id="modal4" class="js_modalButton" data-remodal-target="modal4">続きはこちら</a>
             </figcaption>
           </figure>
         </div>
@@ -88,7 +88,7 @@
               <h2>トランジションのプロパティについて</h2>
               <h3 class="lg-en">CSS Transition</h3>
               <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
-              <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
+              <a id="modal5" class="js_modalButton" data-remodal-target="modal5">続きはこちら</a>
             </figcaption>
           </figure>
         </div> -->
@@ -104,17 +104,17 @@
     <div id="modal1_popup" class="remodal modal-content" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
         <!-- ここにコンテンツを配置 -->
-        <div class="inner-content" id="cssTransition">
-          <section id="cssAnim" class="coding-tips">
+        <div class="inner-content" id="cssTransition-01">
+          <section id="cssAnim-01" class="coding-tips">
             <div class="coding-tips_wrap">
               <div class="header">
                 <h1>CSSのみで構成するアニメーション</h1>
               </div>
 
               <div class="coding-tips_block">
-                <h2>トランジションプロパティ基本のき（その1）</h2>
+                <h2>トランジションプロパティ基本のき</h2>
                 <div class="coding-tips_blockinner">
-                  <h3 class="lg-en">CSS - Transition</h3>
+                  <h3><span class="lg-en">CSS - Transition</span> 基本的な使用方法について</h3>
                   <p>
                     <em>トランジションとは、</em>要素の1つの状態から別の状態への変化を滑らかにするために使用されるCSSプロパティです。<br>
                     アニメーションで使用させる場合は、一般的に、マウスを要素に重ねる（ホバーする）などのユーザーのアクションに応じて、要素の特定の属性（例：色、サイズ、位置など）が変化する場合、特にボタンなどに利用される事が多いです。<br>
@@ -138,7 +138,7 @@
 
                     <div class="code-block">
                       <div class="code-Wrap">
-                        <p>トランジション無し</p>
+                        <p class="em">トランジション無し</p>
 <pre class="lg-en">
 .blue-box {
   width: 100px;
@@ -157,7 +157,7 @@
 
                     <div class="code-block">
                       <div class="code-Wrap">
-                        <p>トランジション有り</p>
+                        <p class="em">トランジション有り</p>
 <pre class="lg-en">
 .blue-box {
   width: 100px;
@@ -209,7 +209,7 @@
 
                     <div class="code-block">
                       <div class="code-Wrap">
-                        <p>トランジション有りを分割した記法</p>
+                        <p class="em">トランジション有りを分割した記法</p>
 <pre class="lg-en">
 .blue-box {
   width: 100px;
@@ -239,8 +239,11 @@
                 <div class="valueType">
                   <div class="read">
                     <h2>イージング関数の種類について</h2>
-                    <p>各要素のホバーすると要素が動きます。<br>イージング関数の値(value)はTransitionプロパティとAnimationプロパティの両方で共通しています。</p>
-                    <p>ホバーしたときのパラメーターの変化率は同じですが、ホバーを外したときの動きにはTransitionプロパティとAnimationプロパティで若干の違いがあります。特に、Animationプロパティの場合はその違い使用用途を考慮して記述する必要があります。</p>
+                    <p>
+                      イージング関数の値(value)はTransitionプロパティとAnimationプロパティの両方で共通しています。<br>
+                      ホバーしたときのパラメーターの変化率は同じですが、ホバーを外したときの動きにはTransitionプロパティとAnimationプロパティで若干の違いがあります。特に、Animationプロパティの場合はその違い使用用途を考慮して記述する必要があります。<br>
+                      各要素のホバーすると要素が動きます。
+                    </p>
                   </div>
 
                   <div class="valueType_detail">
@@ -315,7 +318,82 @@
 
     <div id="modal2_popup" class="remodal modal-content" data-remodal-id="modal2" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
+        <!-- ここにコンテンツを配置 -->
+        <div class="inner-content" id="cssTransition-02">
+          <section id="cssAnim-02" class="coding-tips">
+            <div class="coding-tips_wrap">
+              <div class="header">
+                <h1>CSSのみで構成するアニメーション</h1>
+              </div>
 
+              <div class="coding-tips_block">
+                <h2>トランジションプロパティ基本のき（その2）</h2>
+                <div class="coding-tips_blockinner">
+                  <h3><span class="lg-en">CSS - Transition</span> 様々な動きについて</h3>
+                  <p>
+                    マウスを要素に重ねる（ホバーする）以外にも様々なアクションに応じて要素を変化させる事ができます。<br>
+                    主な方法としてはjavascriptを使用して、スクロールやページが読み込まれた時などをきっかけにクラス名を付与させてアニメーションさせる事ができます。<br>
+                    色や形、不透明度などを変化させる事ができます。
+                  </p>
+                  <div class="focus">
+                    <div class="explanation">
+                      <p class="read">
+                        <span>具体的には</span>
+                        いくつか代表的な動きを、スクロールやホバーさせながら確認していきます。
+                      </p>
+                    </div>
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">スクロールアクションによるデザインエフェクト</p>
+                        <p class="mb20">
+                          リード文などで最も読ませたい箇所にマーカーを引くようなイメージで背景色をひき、それをスクロールによって意図したタイミングでクラス名を付与。<br>
+                          クラス名が付与されたタイミングで、transition: 2s; でアニメーションさせる事によって目を惹くデザインとなっております。<br>
+                          参考サイト：<a href="https://sakura-sup.com/jp/" target="_blank" rel="noopener noreferrer">https://sakura-sup.com/jp/</a>
+                        </p>
+                        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="WNqRZKM" data-pen-title="marker- line" data-user="D-kaneko" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/WNqRZKM">
+                          marker- line</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">ホバーによるデザインエフェクト</p>
+                        <p class="mb20">
+                          ホバーした時にグラデーションが左から右に進み、アンダーラインが伸びるアニメーションです。<br>
+                          このように一つの要素内に複数のアニメーションを組み込む事も可能です。<br>
+                          参考サイト：<a href="https://sakura-sup.com/jp/" target="_blank" rel="noopener noreferrer">https://sakura-sup.com/jp/</a>
+                        </p>
+                        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxogpbX" data-pen-title="ボタンのボバーアクションについて" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/xxogpbX">
+                          ボタンのボバーアクションについて</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">スクロールアクションとホバーによるデザインエフェクト</p>
+                        <p class="mb20">
+                          WEBサイトでよく見られるヘッダーの固定化は、グローバルナビゲーションの使い勝手を向上させるというメリットがあります。<br>
+                          この手法は、WEBサイトのUX向上によく使用される代表的なものです。さらに、アニメーション効果を付け加える事により、デザイン性が上がりUIの向上に繋がります。<br>
+                          ここでは、スクロールアクションとホバーを合わせる事で、アニメーション効果を加え、視覚的な魅力を高め、インタラクティブな体験を提供できます。<br>
+                          参考サイト：<a href="https://xrdive.net/" target="_blank" rel="noopener noreferrer">https://xrdive.net/</a>
+                        </p>
+                        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBzRgKW" data-pen-title="スクロールアクションによるデザインエフェクト（ヘッダー）" data-user="D-kaneko" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                          <span>See the Pen <a href="https://codepen.io/D-kaneko/pen/qBzRgKW">
+                          スクロールアクションによるデザインエフェクト（ヘッダー）</a> by Daizo Kaneko (<a href="https://codepen.io/D-kaneko">@D-kaneko</a>)
+                          on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal2_popup -->
@@ -324,5 +402,6 @@
   </section><!-- モーダル画面エリア 終了 -->
 
 <script src="assets/js/contents.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>

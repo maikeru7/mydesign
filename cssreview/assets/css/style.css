@@ -126,6 +126,246 @@ body {
   height: 100vh;
 }
 
+footer {
+  width: 100%;
+  height: 100px;
+  background: #a3a3a3;
+}
+
+/*UTILITY*/
+@media only screen and (min-width: 768px) {
+  .mt5 {
+    margin-top: 5px;
+  }
+  .mt10 {
+    margin-top: 10px;
+  }
+  .mt15 {
+    margin-top: 15px;
+  }
+  .mt20 {
+    margin-top: 20px;
+  }
+  .mt25 {
+    margin-top: 25px;
+  }
+  .mt30 {
+    margin-top: 30px;
+  }
+  .mt35 {
+    margin-top: 35px;
+  }
+  .mt40 {
+    margin-top: 40px;
+  }
+  .mt45 {
+    margin-top: 45px;
+  }
+  .mt50 {
+    margin-top: 50px;
+  }
+  .mt60 {
+    margin-top: 60px;
+  }
+  .mt70 {
+    margin-top: 70px;
+  }
+  .mt80 {
+    margin-top: 80px;
+  }
+  .mb10 {
+    margin-bottom: 10px;
+  }
+  .mb15 {
+    margin-bottom: 15px;
+  }
+  .mb20 {
+    margin-bottom: 20px;
+  }
+  .mb25 {
+    margin-bottom: 25px;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+  .mb35 {
+    margin-bottom: 35px;
+  }
+  .mb40 {
+    margin-bottom: 40px;
+  }
+  .mb45 {
+    margin-bottom: 45px;
+  }
+  .mb50 {
+    margin-bottom: 50px;
+  }
+  .pt10 {
+    padding-top: 10px;
+  }
+  .pt15 {
+    padding-top: 15px;
+  }
+  .pt20 {
+    padding-top: 20px;
+  }
+  .pt30 {
+    padding-top: 30px;
+  }
+  .pt40 {
+    padding-top: 40px;
+  }
+  .pt50 {
+    padding-top: 50px;
+  }
+  .pb10 {
+    padding-bottom: 10px;
+  }
+  .pb15 {
+    padding-bottom: 15px;
+  }
+  .pb20 {
+    padding-bottom: 20px;
+  }
+  .pb25 {
+    padding-bottom: 25px;
+  }
+  .pb30 {
+    padding-bottom: 30px;
+  }
+  .pb40 {
+    padding-bottom: 40px;
+  }
+  .pb50 {
+    padding-bottom: 50px;
+  }
+  .pb60 {
+    padding-bottom: 60px;
+  }
+  .pb70 {
+    padding-bottom: 70px;
+  }
+  .pb80 {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mt5_sp {
+    margin-top: 5px;
+  }
+  .mt10_sp {
+    margin-top: 10px;
+  }
+  .mt15_sp {
+    margin-top: 15px;
+  }
+  .mt20_sp {
+    margin-top: 20px;
+  }
+  .mt25_sp {
+    margin-top: 25px;
+  }
+  .mt30_sp {
+    margin-top: 30px;
+  }
+  .mt35_sp {
+    margin-top: 35px;
+  }
+  .mt40_sp {
+    margin-top: 40px;
+  }
+  .mt45_sp {
+    margin-top: 45px;
+  }
+  .mt50_sp {
+    margin-top: 50px;
+  }
+  .mt60_sp {
+    margin-top: 60px;
+  }
+  .mt70_sp {
+    margin-top: 70px;
+  }
+  .mt80_sp {
+    margin-top: 80px;
+  }
+  .mb10_sp {
+    margin-bottom: 10px;
+  }
+  .mb15_sp {
+    margin-bottom: 15px;
+  }
+  .mb20_sp {
+    margin-bottom: 20px;
+  }
+  .mb25_sp {
+    margin-bottom: 25px;
+  }
+  .mb30_sp {
+    margin-bottom: 30px;
+  }
+  .mb35_sp {
+    margin-bottom: 35px;
+  }
+  .mb40_sp {
+    margin-bottom: 40px;
+  }
+  .mb45_sp {
+    margin-bottom: 45px;
+  }
+  .mb50_sp {
+    margin-bottom: 50px;
+  }
+  .pt10_sp {
+    padding-top: 10px;
+  }
+  .pt15_sp {
+    padding-top: 15px;
+  }
+  .pt20_sp {
+    padding-top: 20px;
+  }
+  .pt30_sp {
+    padding-top: 30px;
+  }
+  .pt40_sp {
+    padding-top: 40px;
+  }
+  .pt50_sp {
+    padding-top: 50px;
+  }
+  .pb10_sp {
+    padding-bottom: 10px;
+  }
+  .pb15_sp {
+    padding-bottom: 15px;
+  }
+  .pb20_sp {
+    padding-bottom: 20px;
+  }
+  .pb25_sp {
+    padding-bottom: 25px;
+  }
+  .pb30_sp {
+    padding-bottom: 30px;
+  }
+  .pb40_sp {
+    padding-bottom: 40px;
+  }
+  .pb50_sp {
+    padding-bottom: 50px;
+  }
+  .pb60_sp {
+    padding-bottom: 60px;
+  }
+  .pb70_sp {
+    padding-bottom: 70px;
+  }
+  .pb80_sp {
+    padding-bottom: 80px;
+  }
+}
+/*UTILITY*/
 /*
 GENERAL STYLING
 ======================= */
@@ -150,7 +390,7 @@ h3 {
 }
 
 p, pre {
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: var(--base-size_1);
   letter-spacing: 0.01em;
 }
@@ -243,7 +483,7 @@ main {
   margin-bottom: var(--mb10);
   line-height: 1;
 }
-.css-details_tips figure figcaption p {
+.css-details_tips figure figcaption p, .css-details_tips figure figcaption pre {
   font-size: 0.8rem;
   line-height: 1.5;
   margin-bottom: var(--mb10);
@@ -378,14 +618,14 @@ html.remodal-is-locked {
   padding: 1rem;
   border-radius: 5px;
 }
-.focus .explanation p.read {
+.focus .explanation p.read, .focus .explanation pre.read {
   padding: 0 0 0.5rem;
   border-bottom: 1px dotted var(--color-val_363636);
 }
-.focus .explanation p.concrete {
+.focus .explanation p.concrete, .focus .explanation pre.concrete {
   padding: 0.5rem 0 0;
 }
-.focus .explanation p span {
+.focus .explanation p span, .focus .explanation pre span {
   display: block;
   font-weight: 700;
 }
@@ -407,11 +647,16 @@ html.remodal-is-locked {
 .code-Wrap {
   width: 100%;
 }
-.code-Wrap p {
+
+p, pre {
   margin-bottom: 0.5rem;
+}
+
+p.em, pre.em {
   font-weight: bold;
 }
-.code-Wrap pre {
+
+pre {
   margin-bottom: 1rem;
   padding: 0.5rem;
   background-color: var(--color-val_d7d7d7);
@@ -482,7 +727,7 @@ html.remodal-is-locked {
   border-bottom: 1px solid #ccc;
   vertical-align: middle;
 }
-.propertyType table td p, .valueType_detail table td p {
+.propertyType table td p, .valueType_detail table td p, .propertyType table td pre, .valueType_detail table td pre {
   font-size: var(--base-size_tq);
 }
 
@@ -512,7 +757,7 @@ html.remodal-is-locked {
   animation: sampleAnm 2.5s linear 0s;
   width: 360px;
 }
-.timing-function .box p {
+.timing-function .box p, .timing-function .box pre {
   margin: 0;
   padding: 5px 10px;
 }
@@ -538,7 +783,7 @@ html.remodal-is-locked {
 .transition-box:hover {
   width: 360px;
 }
-.transition-box p {
+.transition-box p, .transition-box pre {
   margin: 0;
   padding: 5px 10px;
 }
@@ -551,7 +796,7 @@ html.remodal-is-locked {
 .animation-box:hover {
   animation: sampleAnm_02 2.5s forwards;
 }
-.animation-box p {
+.animation-box p, .animation-box pre {
   margin: 0;
   padding: 5px 10px;
 }
@@ -568,39 +813,30 @@ html.remodal-is-locked {
 .transition-box.linear {
   transition-timing-function: linear;
 }
-
 .transition-box.ease {
   transition-timing-function: ease;
 }
-
 .transition-box.ease-in {
   transition-timing-function: ease-in;
 }
-
 .transition-box.ease-out {
   transition-timing-function: ease-out;
 }
-
 .transition-box.ease-in-out {
   transition-timing-function: ease-in-out;
 }
-
 .transition-box.step-start {
   transition-timing-function: step-start;
 }
-
 .transition-box.step-end {
   transition-timing-function: step-end;
 }
-
 .transition-box.cubic-bezier {
   transition-timing-function: cubic-bezier(0.37, -0.41, 0.82, 1.46);
 }
-
 .transition-box.steps-n-start {
   transition-timing-function: steps(4, start);
 }
-
 .transition-box.steps-n-end {
   transition-timing-function: steps(4, end);
 }
@@ -608,44 +844,106 @@ html.remodal-is-locked {
 .animation-box.linear {
   animation-timing-function: linear;
 }
-
 .animation-box.ease {
   animation-timing-function: ease;
 }
-
 .animation-box.ease-in {
   animation-timing-function: ease-in;
 }
-
 .animation-box.ease-out {
   animation-timing-function: ease-out;
 }
-
 .animation-box.ease-in-out {
   animation-timing-function: ease-in-out;
 }
-
 .animation-box.step-start {
   animation-timing-function: step-start;
 }
-
 .animation-box.step-end {
   animation-timing-function: step-end;
 }
-
 .animation-box.steps-n-start {
   animation-timing-function: steps(4, start);
 }
-
 .animation-box.steps-n-end {
   animation-timing-function: steps(4, end);
 }
-
 .animation-box.cubic-bezier {
   animation-timing-function: cubic-bezier(0.37, -0.41, 0.82, 1.46);
 }
 
 /***timing-function***/
+/* #cssTransition-02 */
+#cssTransition-02 .blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+/* .blue-box 定義 */
+.parent-box {
+  height: 100px;
+  position: relative;
+}
+
+.blue-box.tra-left-move {
+  position: absolute;
+  left: 0;
+  transition-property: left;
+  transition-duration: 1s;
+}
+.blue-box.tra-left-move:hover {
+  left: 100px;
+}
+.blue-box.tra-show-hide {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+.blue-box.tra-show-hide:hover {
+  opacity: 1;
+}
+.blue-box.tra-exp {
+  transition-property: width, height;
+  transition-duration: 0.5s, 0.5s;
+}
+.blue-box.tra-exp:hover {
+  width: 200px !important;
+  height: 200px !important;
+}
+.blue-box.tra-color {
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.blue-box.tra-color:hover {
+  background-color: red !important;
+}
+.blue-box.tra-shape {
+  transition-property: border-radius;
+  transition-duration: 0.5s;
+}
+.blue-box.tra-shape:hover {
+  border-radius: 50%;
+}
+
+.tra-txt-color {
+  color: black;
+  transition: color 0.3s;
+}
+.tra-txt-color:hover {
+  color: yellow;
+}
+
+.tra-txt-fontsize {
+  color: black;
+  font-size: 16px;
+  transition: font-size 0.5s;
+}
+.tra-txt-fontsize:hover {
+  font-size: 24px;
+}
+
+/* #cssTransition-02 */
 .transition-anime .box {
   width: 100px;
   height: 100px;
@@ -678,9 +976,4 @@ html.remodal-is-locked {
   100% {
     opacity: 0;
   }
-}
-footer {
-  width: 100vw;
-  height: 100px;
-  background: #a3a3a3;
 }/*# sourceMappingURL=style.css.map */
