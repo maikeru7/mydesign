@@ -375,7 +375,7 @@ COMMON
 ======================= */
 h1, h2, h3, h4, h5 {
   letter-spacing: 0em;
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 h1 {
@@ -617,6 +617,7 @@ html.remodal-is-locked {
 }
 .coding-tips_wrap .header p {
   color: var(--color-val_fff);
+  margin-top: var(--mt5);
 }
 .coding-tips_block {
   margin-bottom: 50px;
@@ -646,6 +647,14 @@ html.remodal-is-locked {
 .focus .explanation p span {
   display: block;
   font-weight: 700;
+}
+.focus .explanation ul {
+  margin: 0.25em 0 0 0.5em;
+}
+.focus .explanation ul li {
+  line-height: 1.5;
+  font-size: var(--base-size_tq);
+  letter-spacing: 0.01em;
 }
 
 .code-block {
@@ -751,29 +760,6 @@ html.remodal-is-locked {
 }
 
 /*propertyType/valueType*/
-.timing-function .box {
-  background-color: var(--color-val_125585);
-  color: #fff;
-  animation: sampleAnm 2.5s linear 0s;
-  width: 360px;
-}
-.timing-function .box p {
-  margin: 0;
-  padding: 5px 10px;
-}
-.timing-function .box:nth-child(2n) {
-  background-color: var(--color-val_dfe3eb);
-  color: var(--color-val_000);
-}
-
-@keyframes sampleAnm {
-  0% {
-    width: 120px;
-  }
-  100% {
-    width: 360px;
-  }
-}
 .transition-box {
   background-color: var(--color-val_125585);
   color: #fff;
@@ -873,115 +859,70 @@ html.remodal-is-locked {
 }
 
 /***timing-function***/
-.blue-box.trans-basic_01 {
+#cssTransform-01 .blue-box.trans-basic_01 {
   transform: translateX(200px);
 }
-.blue-box.trans-basic_02 {
+#cssTransform-01 .blue-box.trans-basic_02 {
   transform: rotate(45deg);
 }
-.blue-box.trans-basic_03 {
+#cssTransform-01 .blue-box.trans-basic_03 {
   transform: rotate3d(1, 1, 1, 180deg);
 }
-.blue-box.trans-basic_04 {
+#cssTransform-01 .blue-box.trans-basic_04 {
   transform: scale(1.5);
 }
-.blue-box.trans-basic_05 {
+#cssTransform-01 .blue-box.trans-basic_05 {
   transform: scale(0.5);
 }
-.blue-box.trans-basic_06 {
+#cssTransform-01 .blue-box.trans-basic_06 {
   transform: skewX(30deg);
 }
-.blue-box.trans-basic_07 {
-  transform: translateZ(100px) rotateY(45deg);
+#cssTransform-01 .blue-box.trans-basic_07 {
+  transform: rotateY(45deg) translateZ(100px);
 }
 
-.blue-box.tra-left-move {
-  position: absolute;
-  left: 0;
-  transition-property: left;
-  transition-duration: 1s;
+#cssTransform-02 {
+  --move01: all 1s ease-in-out;
 }
-.blue-box.tra-left-move:hover {
-  left: 100px;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_01 {
+  transition: var(--move01);
 }
-.blue-box.tra-show-hide {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.5s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_01:hover {
+  transform: translateX(200px);
 }
-.blue-box.tra-show-hide:hover {
-  opacity: 1;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_02 {
+  transition: var(--move01);
 }
-.blue-box.tra-exp {
-  transition-property: width, height;
-  transition-duration: 0.5s, 0.5s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_02:hover {
+  transform: rotate(45deg);
 }
-.blue-box.tra-exp:hover {
-  width: 200px !important;
-  height: 200px !important;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_03 {
+  transition: var(--move01);
 }
-.blue-box.tra-color {
-  transition-property: background-color;
-  transition-duration: 1s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_03:hover {
+  transform: rotate3d(1, 1, 1, 180deg);
 }
-.blue-box.tra-color:hover {
-  background-color: red !important;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_04 {
+  transition: var(--move01);
 }
-.blue-box.tra-shape {
-  transition-property: border-radius;
-  transition-duration: 0.5s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_04:hover {
+  transform: scale(1.5);
 }
-.blue-box.tra-shape:hover {
-  border-radius: 50%;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_05 {
+  transition: var(--move01);
 }
-
-.tra-txt-color {
-  color: black;
-  transition: color 0.3s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_05:hover {
+  transform: scale(0.5);
 }
-.tra-txt-color:hover {
-  color: yellow;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_06 {
+  transition: var(--move01);
 }
-
-.tra-txt-fontsize {
-  color: black;
-  font-size: 16px;
-  transition: font-size 0.5s;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_06:hover {
+  transform: skewX(30deg);
 }
-.tra-txt-fontsize:hover {
-  font-size: 24px;
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_07 {
+  transition: var(--move01);
 }
-
-.transition-anime .box {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  transition: transform 0.3s ease;
-}
-.transition-anime .box:hover {
-  transform: rotate(45deg) scale(1.2);
-}
-
-.keyframes-anime .box {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-}
-.keyframes-anime .box:hover {
-  animation: fadeawayAnime 2s ease;
-}
-
-@keyframes fadeawayAnime {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.08, 1.08);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-  }
+#cssTransform-02 .example-wrap_hov .blue-box.trans-basic_07:hover {
+  transform: rotateY(45deg) translateZ(100px);
 }/*# sourceMappingURL=style.css.map */
