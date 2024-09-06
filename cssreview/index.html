@@ -62,32 +62,32 @@
             <img src="assets/img/bnr_02.png" alt="トランジションのプロパティについて">
             <figcaption>
               <h2>トランスフォームプロパティ基本のき</h2>
-              <h3 class="lg-en">CSS - Transform 基本的な使用方法について</h3>
-              <p>トランスフォームとは、特定の要素を回転、拡大縮小、傾斜、移動することができるプロパティ...</p>
+              <h3><span class="lg-en">CSS - Transform</span> 基本的な使用方法について</h3>
+              <p>トランスフォーム(Transform)とは、特定の要素を回転、拡大縮小、傾斜、移動することが...</p>
               <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
             </figcaption>
           </figure>
         </div>
 
-        <!-- <div class="css-details_tips" id="modal4_tile">
+        <div class="css-details_tips" id="modal4_tile">
           <figure>
-            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <img src="assets/img/bnr_02_2.png" alt="トランスフォームとトランジションの組み合わせについて">
             <figcaption>
-              <h2>トランジションのプロパティについて</h2>
-              <h3 class="lg-en">CSS - Transform</h3>
-              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <h2>トランスフォームとアニメーションについて その1</h2>
+              <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
+              <p>トランスフォーム(Transform)は、要素を変形させたり、要素の 形状、位置、サイズなどを...</p>
               <a id="modal4" class="js_modalButton" data-remodal-target="modal4">続きはこちら</a>
             </figcaption>
           </figure>
         </div>
 
-        <div class="css-details_tips" id="modal5_tile">
+        <!-- <div class="css-details_tips" id="modal5_tile">
           <figure>
-            <img src="https://placehold.jp/640x400.png" alt="トランジションのプロパティについて">
+            <img src="https://placehold.jp/640x400.png" alt="トランスフォームとアニメーションについて">
             <figcaption>
-              <h2>トランジションのプロパティについて</h2>
-              <h3 class="lg-en">CSS Transition</h3>
-              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <h2>トランスフォームとアニメーションについて その2</h2>
+              <h3><span class="lg-en">CSS Transition</span> アニメーション(@Keyframes)との組合せ方について</h3>
+              <p>トランスフォーム(Transform)は、@Keyframesと組み合わせて使用することで、アニメーションの...</p>
               <a id="modal5" class="js_modalButton" data-remodal-target="modal5">続きはこちら</a>
             </figcaption>
           </figure>
@@ -151,7 +151,7 @@
   width: 100%;
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box unmove"></div>
                         </div>
                       </div>
@@ -171,7 +171,7 @@
   width: 100%; <span>/* .blue-boxにホバーすると横幅が100%になりますが、transitionのプロパティ通りの動きをします。 */</span>
 } 
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box move"></div>
                         </div>
                       </div>
@@ -231,7 +231,7 @@
   width: 100%;
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box move"></div>
                         </div>
                       </div>
@@ -432,6 +432,7 @@
         <div class="inner-content" id="cssTransform-01">
           <section id="cssAnim-03" class="coding-tips">
             <div class="coding-tips_wrap">
+
               <div class="header">
                 <h1>CSSのみで構成するアニメーション</h1>
                 <p>CSS - Transform の基本編</p>
@@ -440,16 +441,18 @@
               <div class="coding-tips_block">
                 <h2>トランスフォームプロパティ基本のき</h2>
                 <div class="coding-tips_blockinner">
-                  <h3><span class="lg-en">CSS - Transform</span> 基本的な使用方法について</h3>
+                  <h3><span class="lg-en">CSS - Transform</span></h3>
                   <p>
-                    <em>トランスフォームとは、</em>CSSのtransformプロパティを使用すると、特定の要素を回転、拡大縮小、傾斜、移動することができます。<br>
-                    2Dの平面的な動きだけでなく、3Dの立体的な動きも可能です。また、transformプロパティをキーフレームアニメーションと組み合わせることで、要素の変形を時間軸に沿って滑らかにアニメーションさせることができます。
+                    <em>トランスフォーム(Transform)とは、</em>特定の要素を回転、拡大縮小、傾斜、移動することができるプロパティです。<br>
+                    これによりデザイナーの意図する場所に配置したり、変形させたりできるので表現に広がりを持たせることができます。<br>
+                    さらに、2Dだけでなく3Dの立体的な動きも実現でき、transformプロパティをキーフレームアニメーションと組み合わせることで、要素を時間軸に沿って滑らかにアニメーションさせることも可能です。
                   </p>
+
                   <div class="focus">
                     <div class="explanation">
                       <p class="read">
                         <span>具体的に</span>
-                        ここでは、CSS transform プロパティを使用した基本的な操作（2D & 3D）について解説します。
+                        ここでは、CSS transform プロパティを使用した基本的な操作（2D &amp; 3D）について解説します。
                       </p>
                       <p class="concrete">
                         <span>水平移動: translate</span>
@@ -465,6 +468,7 @@
 </pre>
 
                       </p>
+
                       <p class="concrete">
                         <span>回転: rotate</span>
                         要素を回転させるのがrotateです。<br>回転アニメーションを使用することで、WEBサイトにさまざまな視覚的効果を付加できます。
@@ -478,6 +482,7 @@
 }
 </pre>
                       </p>
+
                       <p class="concrete">
                         <span>その他</span>
                         他にも、要素を拡大、傾斜、移動、回転させることができます。
@@ -494,7 +499,6 @@
                     <div class="code-block">
                       <div class="code-Wrap">
                         <p class="em">transform: translateX(200px); </p>
-                        <!-- <p class="mb20">transformは基本的に形状の変化を表します。ですのでtransformをアニメーションさせたい時はtransitionと組み合わせるか、キーフレームを使ってアニメーションさせます。</p> -->
 <pre class="lg-en standout_d7">
 .blue-box {
   width: 100px;
@@ -503,7 +507,7 @@
   <span class="em">transform: translateX(200px);</span> <span>/* すでに移動した後の状態を表示させるので、移動前・移動後を表示するにはアニメーションさせる必要があります。*/</span>
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box trans-basic_01"></div>
                         </div>
                       </div>
@@ -520,7 +524,7 @@
   <span class="em">transform: rotate(45deg);</span> <span>/* 中心から45°回転 */</span>
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box trans-basic_02"></div>
                         </div>
                       </div>
@@ -537,7 +541,7 @@
   <span class="em">transform: rotate3d(1,1,1,180deg);</span> <span>/* X軸、Y軸、Z軸の3つの軸を基準に 180°回転 */</span>
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box trans-basic_03"></div>
                         </div>
                       </div>
@@ -588,7 +592,7 @@
   <span class="em">transform: skewX(30deg);</span> <span>/* X軸方向に30度傾ける */</span>
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box trans-basic_06"></div>
                         </div>
                       </div>
@@ -605,8 +609,216 @@
   <span class="em">transform: translateZ(100px) rotateY(45deg);</span> <span>/* Z軸方向に100px移動し、Y軸を中心に45度回転 */</span>
 }
 </pre>
-                        <div>
+                        <div class="example-wrap">
                           <div class="blue-box trans-basic_07"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- ここにコンテンツを配置 #cssTransform-01 -->
+      </section>
+      <button class="remodal-close initial-data" data-remodal-action="close">close</button>
+    </div><!-- modal3_popup -->
+
+    <div id="modal4_popup" class="remodal modal-content" data-remodal-id="modal4" data-remodal-options="hashTracking: false">
+      <section class="school-infomaiton modal-content_wrap">
+        <!-- ここにコンテンツを配置 #cssTransform-02 -->
+        <div class="inner-content" id="cssTransform-02">
+          <section id="cssAnim-04" class="coding-tips">
+            <div class="coding-tips_wrap">
+              <div class="header">
+                <h1>CSSのみで構成するアニメーション</h1>
+                <p>CSS - Transform アニメーション(transition)との組合せ</p>
+              </div>
+
+              <div class="coding-tips_block">
+                <h2>トランスフォームとアニメーションについて その1</h2>
+                <div class="coding-tips_blockinner">
+                  <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
+                  <p>
+                    <em>トランスフォーム(Transform)は、</em>要素を変形させたり、要素の 形状、位置、サイズなどを変化させることを目的としたプロパティです。<br>
+                    CSSが読まれた時点で要素は元の状態から瞬時に意図した状態に変化します。あるスタイルから別のスタイルへと徐々に変化させる事を目的としたトランジション(Transition)と混同してしまいがちですが意味合いが異なります。<br>
+                    トランスフォーム(Transform)させたい要素に対しアニメーションを適用する場合は、:hoverなどを利用してトランジション(Transition)もしくはキーフレーム(Keyframes)を使用してアニメーションを作成したりすることが一般的です。
+                  </p>
+                  <div class="focus">
+                    <div class="explanation">
+                      <p class="read">
+                        <span>具体的に</span>
+                        「トランスフォームプロパティ基本のき」で紹介したコーディング例をベースに:hoverした際にtransitionプロパティのみで動くケースの動作確認を行います。
+                      </p>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: translateX(200px); </p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> <span>/* transitionプロパティで動き方を予め定義しておく */</span>
+}
+.blue-box:hover {
+  <span class="em">transform: translateX(200px);</span> <span>/* ホバー(:hover)した時に、X方向に200px移動します */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_01"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: rotate(45deg);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span>
+}
+.blue-box:hover {
+  <span class="em">transform: rotate(45deg);</span> <span>/* ホバー(:hover)した時に45°回転します。 */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_02"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: rotate3d(1,1,1,180deg);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> 
+}
+.blue-box:hover {
+  <span class="em">transform: rotate3d(1,1,1,180deg);</span> <span>/* ホバー(:hover)した時に、X軸、Y軸、Z軸の3つの軸を基準に 180°回転します */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_03"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: scale(1.5);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> 
+}
+.blue-box:hover {
+  <span class="em">transform: scale(1.5);</span> <span>/* ホバー(:hover)した時に、大きさが1.5倍になります */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_04"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: scale(.5);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> 
+}
+.blue-box:hover {
+  <span class="em">transform: scale(.5);</span> <span>/* ホバー(:hover)した時に、大きさが0.5倍になります */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_05"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: skewX(30deg);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> 
+}
+.blue-box:hover {
+  <span class="em">transform: skewX(30deg);</span> <span>/* ホバー(:hover)した時に、X軸方向に30度傾けます */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_06"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="code-block">
+                      <div class="code-Wrap">
+                        <p class="em">transform: translateZ(100px) rotateY(45deg);</p>
+<pre class="lg-en standout_d7 ">
+ホバーで動くケースの記述方法
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  <span class="em">transition: all 1s ease-in-out;</span> 
+}
+.blue-box:hover {
+  <span class="em">transform: translateZ(100px) rotateY(45deg);</span> <span>/* ホバー(:hover)した時に、Z軸方向に100px移動し、Y軸を中心に45度回転します */</span>
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動き方</p>
+                            <div class="blue-box trans-basic_07"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -615,38 +827,91 @@
                 </div>
               </div>
 
-
-
             </div>
           </section>
         </div>
-        <!-- ここにコンテンツを配置 #cssTransform-01 -->
-
-      </section>
-      <button class="remodal-close initial-data" data-remodal-action="close">close</button>
-    </div><!-- modal3_popup -->
-
-
-
-
-
-
-
-
-
-
-    <div id="modal4_popup" class="remodal modal-content" data-remodal-id="modal4" data-remodal-options="hashTracking: false">
-      <section class="school-infomaiton modal-content_wrap">
-        <!-- ここにコンテンツを配置 -->
-
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal4_popup -->
 
+
+
     <div id="modal5_popup" class="remodal modal-content" data-remodal-id="modal5" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
-        <!-- ここにコンテンツを配置 -->
+        <!-- ここにコンテンツを配置 #cssTransform-03 -->
+        <div class="inner-content" id="cssTransform-03">
+          <section id="cssAnim-05" class="coding-tips">
+            <div class="coding-tips_wrap">
+              <div class="header">
+                <h1>CSSのみで構成するアニメーション</h1>
+                <p>CSS - Transform アニメーション(@Keyframes)との組合せ</p>
+              </div>
+              <div class="coding-tips_block">
+                <h2>トランスフォームとアニメーションについて その2</h2>
+                <div class="coding-tips_blockinner">
+                  <h3><span class="lg-en">CSS - Transform</span> アニメーション(@Keyframes)との組合せ方について</h3>
+                  <p>
+                    <em>トランスフォーム(Transform)は、</em>@Keyframesと組み合わせて使用することで、アニメーションの動きを詳細に制御できます。<br>
+                    @Keyframesを使うことで、アニメーションの各ステップを細かく定義できるため、要素が回転しながら移動したり、スムーズに拡大縮小するアニメーションが実現できます。<br>
+                    また、2Dの動きだけでなく、3Dの複雑な動きも可能となり、Webデザインにおいてよりダイナミックでインタラクティブな体験を提供できます。
+                  </p>
+                  <div class="focus">
+                    <div class="explanation">
+                      <p class="read">
+                        <span>具体的に</span>
+                        @Keyframesを使用した基本的な記述方法をご紹介します。
+                      </p>
 
+                      <p class="concrete">
+                        <span>X方向に200px水平移動させる場合のアニメーション</span>
+                        下記のCSSは、幅100px、高さ100pxの青い四角形がホバーされた際、X方向に0pxから200pxまで2.5秒かけて移動するアニメーションを作成しています。<br>
+                        このアニメーションでは、transitionプロパティの代わりにanimationプロパティを使用してアニメーションの基本的な動作を定義し、細かな動きは@keyframesで指定しています。<br>
+                        animationプロパティは、アニメーションの様々な側面を制御する複合プロパティです。主なプロパティは以下の通りです。<br>
+                      </p>
+                        <ul>
+                          <li><b>animation-name:</b> アニメーションの名前を指定します。</li>
+                          <li><b>animation-duration:</b> アニメーションにかかる時間を指定します。</li>
+                          <li><b>animation-timing-function:</b> アニメーションの速度変化を指定します（イージング関数）。</li>
+                          <li><b>animation-delay:</b> アニメーションの開始時間を遅らせる時間を指定します。</li>
+                          <li><b>animation-iteration-count:</b> アニメーションの繰り返し回数を指定します。</li>
+                          <li><b>animation-direction:</b> アニメーションの再生方向を指定します（alternate:交互再生など）。</li>
+                          <li><b>animation-fill-mode:</b> アニメーションの終了時の状態を指定します（forwards:最終フレームの状態を維持など）。</li>
+                        </ul>
+                      <p class="concrete">
+---- 記述例 ----
+<pre class="lg-en">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box:hover {
+  animation: moveRight 2.5s ease-in-out; /* animationのショートハンドで、アニメーションネーム、アニメーションにかかる時間、イージング関数を指定 */
+}
+@keyframes moveRight {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+</pre>
+                      </p>
+
+
+
+                    </div>
+
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+        </div>
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal5_popup -->
