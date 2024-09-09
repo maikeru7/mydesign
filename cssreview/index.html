@@ -75,23 +75,23 @@
             <figcaption>
               <h2>トランスフォームとアニメーションについて その1</h2>
               <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
-              <p>トランスフォーム(Transform)は、要素を変形させたり、要素の 形状、位置、サイズなどを...</p>
+              <p>トランスフォーム(Transform)は、アニメーションが適用されていない場合、CSSが読まれた...</p>
               <a id="modal4" class="js_modalButton" data-remodal-target="modal4">続きはこちら</a>
             </figcaption>
           </figure>
         </div>
 
-        <!-- <div class="css-details_tips" id="modal5_tile">
+        <div class="css-details_tips" id="modal5_tile">
           <figure>
-            <img src="https://placehold.jp/640x400.png" alt="トランスフォームとアニメーションについて">
+            <img src="assets/img/bnr_02_3.png" alt="animationと@keyframesの組み合わせ">
             <figcaption>
               <h2>トランスフォームとアニメーションについて その2</h2>
-              <h3><span class="lg-en">CSS Transition</span> アニメーション(@Keyframes)との組合せ方について</h3>
-              <p>トランスフォーム(Transform)は、@Keyframesと組み合わせて使用することで、アニメーションの...</p>
+              <h3><span class="lg-en">CSS - Transform</span> animationプロパティと@keyframesの組合せについて</h3>
+              <p>トランスフォーム(Transform)は、animationプロパティと@keyframesを組み合わせて使用する...</p>
               <a id="modal5" class="js_modalButton" data-remodal-target="modal5">続きはこちら</a>
             </figcaption>
           </figure>
-        </div>  -->
+        </div> 
       </section>
     </section>
 
@@ -443,9 +443,9 @@
                 <div class="coding-tips_blockinner">
                   <h3><span class="lg-en">CSS - Transform</span></h3>
                   <p>
-                    <em>トランスフォーム(Transform)とは、</em>特定の要素を回転、拡大縮小、傾斜、移動することができるプロパティです。<br>
-                    これによりデザイナーの意図する場所に配置したり、変形させたりできるので表現に広がりを持たせることができます。<br>
-                    さらに、2Dだけでなく3Dの立体的な動きも実現でき、transformプロパティをキーフレームアニメーションと組み合わせることで、要素を時間軸に沿って滑らかにアニメーションさせることも可能です。
+                    <em>トランスフォーム(Transform)とは、</em>特定の要素を回転、拡大縮小、傾斜、移動させることができるCSSプロパティです。<br>
+                    これにより、デザイナーは要素を意図した位置に配置したり、形状を変えたりすることで、表現の幅を広げることができます。また、2Dだけでなく3Dでの立体的な動きも実現できます。<br>
+                    ただし、transformプロパティ自体にはアニメーション機能がないため、transitionプロパティやanimationプロパティと@keyframesを組み合わせることで、要素を時間軸に沿って滑らかにアニメーションさせることが可能です。<br>
                   </p>
 
                   <div class="focus">
@@ -485,7 +485,7 @@
 
                       <p class="concrete">
                         <span>その他</span>
-                        他にも、要素を拡大、傾斜、移動、回転させることができます。
+                        他にも、要素を拡大、傾斜、移動させる事ができます。
 <pre class="lg-en">
 .blue-box {
   transform: scale(2); <span>/* 2倍に拡大 */</span>
@@ -643,15 +643,18 @@
                 <div class="coding-tips_blockinner">
                   <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
                   <p>
-                    <em>トランスフォーム(Transform)は、</em>要素を変形させたり、要素の 形状、位置、サイズなどを変化させることを目的としたプロパティです。<br>
-                    CSSが読まれた時点で要素は元の状態から瞬時に意図した状態に変化します。あるスタイルから別のスタイルへと徐々に変化させる事を目的としたトランジション(Transition)と混同してしまいがちですが意味合いが異なります。<br>
-                    トランスフォーム(Transform)させたい要素に対しアニメーションを適用する場合は、:hoverなどを利用してトランジション(Transition)もしくはキーフレーム(Keyframes)を使用してアニメーションを作成したりすることが一般的です。
+                    <em>トランスフォーム(Transform)は、</em>アニメーションが適用されていない場合、CSSが読まれた時点ですでに意図した状態に変化しています。<br>
+                    それと比べてあるスタイルから別のスタイルへと徐々に変化させる事を目的としたトランジション(Transition)と混同してしまいがちですが意味合いが異なります。<br>
+                    トランスフォーム(Transform)させたい要素に対しアニメーションを適用する場合は、:hoverなどをトリガーとして利用し、トランジション(Transition)もしくはanimationプロパティとキーフレーム(@keyframes)を使用してアニメーションを作成したりすることが一般的です。
                   </p>
                   <div class="focus">
                     <div class="explanation">
                       <p class="read">
                         <span>具体的に</span>
                         「トランスフォームプロパティ基本のき」で紹介したコーディング例をベースに:hoverした際にtransitionプロパティのみで動くケースの動作確認を行います。
+                      </p>
+                      <p class="concrete">
+                        transformを利用してアニメーションさせる場合、:hover以前の状態の時にtransitionプロパティで動きを定義して、:hover時にtransformで意図した状態するといったような流れになります。
                       </p>
                     </div>
 
@@ -844,16 +847,16 @@
             <div class="coding-tips_wrap">
               <div class="header">
                 <h1>CSSのみで構成するアニメーション</h1>
-                <p>CSS - Transform アニメーション(@Keyframes)との組合せ</p>
+                <p>CSS - Transform animationプロパティと@keyframesの組合せについて</p>
               </div>
               <div class="coding-tips_block">
                 <h2>トランスフォームとアニメーションについて その2</h2>
                 <div class="coding-tips_blockinner">
-                  <h3><span class="lg-en">CSS - Transform</span> アニメーション(@Keyframes)との組合せ方について</h3>
+                  <h3><span class="lg-en">CSS - Transform</span> animationプロパティと@keyframesの組合せについて</h3>
                   <p>
-                    <em>トランスフォーム(Transform)は、</em>@Keyframesと組み合わせて使用することで、アニメーションの動きを詳細に制御できます。<br>
-                    @Keyframesを使うことで、アニメーションの各ステップを細かく定義できるため、要素が回転しながら移動したり、スムーズに拡大縮小するアニメーションが実現できます。<br>
-                    また、2Dの動きだけでなく、3Dの複雑な動きも可能となり、Webデザインにおいてよりダイナミックでインタラクティブな体験を提供できます。
+                    <em>トランスフォーム(Transform)は、</em>animationプロパティと@keyframesを組み合わせて使用することで、アニメーションの動きを細かく制御できます。<br>
+                    イージング関数や@keyframesを活用することで、アニメーションの各ステップを詳細に定義でき、要素が回転しながら移動したりスムーズに拡大縮小するなど、より複雑な動きを実現できます。<br>
+                    さらに、2Dの動きにとどまらず、3Dの複雑な動きも可能となり、Webデザインにおいてよりダイナミックでインタラクティブな体験を提供できます。
                   </p>
                   <div class="focus">
                     <div class="explanation">
@@ -868,27 +871,47 @@
                         このアニメーションでは、transitionプロパティの代わりにanimationプロパティを使用してアニメーションの基本的な動作を定義し、細かな動きは@keyframesで指定しています。<br>
                         animationプロパティは、アニメーションの様々な側面を制御する複合プロパティです。主なプロパティは以下の通りです。<br>
                       </p>
-                        <ul>
-                          <li><b>animation-name:</b> アニメーションの名前を指定します。</li>
-                          <li><b>animation-duration:</b> アニメーションにかかる時間を指定します。</li>
-                          <li><b>animation-timing-function:</b> アニメーションの速度変化を指定します（イージング関数）。</li>
-                          <li><b>animation-delay:</b> アニメーションの開始時間を遅らせる時間を指定します。</li>
-                          <li><b>animation-iteration-count:</b> アニメーションの繰り返し回数を指定します。</li>
-                          <li><b>animation-direction:</b> アニメーションの再生方向を指定します（alternate:交互再生など）。</li>
-                          <li><b>animation-fill-mode:</b> アニメーションの終了時の状態を指定します（forwards:最終フレームの状態を維持など）。</li>
-                        </ul>
-                      <p class="concrete">
----- 記述例 ----
-<pre class="lg-en">
+                    </div>
+
+                    <div class="propertyType">
+                      <table>
+                        <thead>
+                          <tr><th class="prop-name">プロパティ名</th><th class="prop-exp">説明</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>animation-name:</td><td>アニメーションの名前を指定します。</td></tr>
+                          <tr><td>animation-duration:</td><td>アニメーションにかかる時間を指定します。</td></tr>
+                          <tr><td>animation-timing-function:</td><td>アニメーションの速度変化を指定します（イージング関数）。</td></tr>
+                          <tr><td>animation-delay:</td><td>アニメーションの開始時間を遅らせる時間を指定します。</td></tr>
+                          <tr><td>animation-iteration-count:</td><td>アニメーションの繰り返し回数を指定します。</td></tr>
+                          <tr><td>animation-direction:</td><td>アニメーションの再生方向を指定します（alternate:交互再生など）。</td></tr>
+                          <tr><td>animation-fill-mode:</td><td>アニメーションの終了時の状態を指定します（forwards:最終フレームの状態を維持など）。</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="code-block">
+
+                      <div class="code-Wrap">
+                        <p class="em">ボバーした際のanimationの動きについて</p>
+                        <p>
+                          animationで名前を指定して、その名前に対してアニメーションにかかる時間と速度変化を指定します。<br>
+                          その後、@keyframesで動きの詳細を決めていきます。
+                        </p>
+<pre class="lg-en standout_d7 ">
 .blue-box {
   width: 100px;
   height: 100px;
   background-color: blue;
 }
 .blue-box:hover {
-  animation: moveRight 2.5s ease-in-out; /* animationのショートハンドで、アニメーションネーム、アニメーションにかかる時間、イージング関数を指定 */
+  animation-name:moveRight01;
+  animation-duration:2.5s;
+  animation-timing-function:ease-in-out;
+
+  animation: moveRight 2.5s ease-in-out; /* animationのショートハンドで書くと、アニメーションネーム、アニメーションにかかる時間、イージング関数 となっている。 */
 }
-@keyframes moveRight {
+@keyframes moveRight01 {
   from {
     transform: translateX(0px);
   }
@@ -897,18 +920,122 @@
   }
 }
 </pre>
-                      </p>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動</p>
+                            <div class="blue-box amin-basic_01"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
+                    <div class="code-block">
 
+                      <div class="code-Wrap">
+                        <p class="em">@keyframesで作る複雑な動きについて</p>
+                        <p>
+                          @keyframesの動きの定義をform〜toではなく、数値によって細かく指定することができます。<br>
+                          animation-timing-functionやanimation-duration、@keyframesなどを変更するだけで多くのアニメーションを表現できます。
+                        </p>
+<pre class="lg-en standout_d7 ">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box:hover {
+  animation-name:moveRight02;
+  animation-duration:2.5s;
+  animation-timing-function:ease;
+}
+@keyframes moveRight02 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: .5;
+  }
+  95% {
+    transform: scale(.95, .95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動</p>
+                            <div class="blue-box amin-basic_02"></div>
+                          </div>
+                        </div>
+                      </div>
 
                     </div>
 
+                    <div class="code-block">
 
+                      <div class="code-Wrap">
+                        <p class="em">keyframesでアニメーションを作る時の注意点</p>
+                        <p>
+                          hoverで動くアニメーションの場合、@keyframesが0%から始まり100%でアニメが終了しますが、上の仕様のままだとすぐに0%に戻ってしまい動きに唐突さが出てしまいます。<br>
+                          そんな時は、animation-fill-mode: forwards;を追加しておくと、アニメーションの最終状態を保持する事ができ、すぐに最初の状態に戻るのを防ぐ事ができます。
+                        </p>
+<pre class="lg-en standout_d7 ">
+.blue-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.blue-box:hover {
+  animation-name:moveRight02;
+  animation-duration:2.5s;
+  animation-timing-function:ease;
+  animation-fill-mode: forwards; /* アニメーションの最終状態を保持する */
+}
+@keyframes moveRight02 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: .5;
+  }
+  95% {
+    transform: scale(.95, .95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
+}
+</pre>
+                        <div class="example-wrap">
+                          <div class="example-wrap_hov">
+                            <p class="em">ホバー(:hover)した時の動（ホバーを外すと@keyframesは0%に戻る）</p>
+                            <div class="blue-box amin-basic_02_2"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </section>
         </div>

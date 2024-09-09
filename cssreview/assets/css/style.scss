@@ -355,7 +355,7 @@ main {
         h3 {
           font-size: 1rem;
           margin-bottom: var(--mb10);
-          line-height: 1.0;
+          line-height: 1.2;
         }
         p {
           font-size: .8rem;
@@ -598,7 +598,7 @@ html {
     width: 1240px;
     border-left:1px solid #ccc;
     border-top:1px solid #ccc;
-    font-size: var(--base-size_1);
+    font-size: var(--base-size_tq);
     line-height: 1.2;
     th {
       padding: .5rem 1rem;
@@ -833,133 +833,84 @@ html {
   }
 }
 
+#cssTransform-03 {
+  .blue-box {
+    &.amin-basic_01 {
+      &:hover {
+        animation-name:moveRight01;
+        animation-duration:2.5s;
+        animation-timing-function:ease-in-out;
+      }
+    }
+    &.amin-basic_02 {
+      &:hover {
+        animation-name:moveRight02;
+        animation-duration:2.5s;
+        animation-timing-function:ease;
+      }
+    }
+    &.amin-basic_02_2 {
+      &:hover {
+        animation-name:moveRight02_2;
+        animation-duration:2.5s;
+        animation-timing-function:ease;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
 
-
-
-
-
-
-// .timing-function {
-//   .box {
-//     background-color: var(--color-val_125585);
-//     color: #fff;
-//     animation: sampleAnm 2.5s linear 0s;
-//     width: 360px;
-//     p {
-//       margin: 0;
-//       padding: 5px 10px;
-//     }
-//   }
-//   .box:nth-child(2n){
-//     background-color: var(--color-val_dfe3eb);
-//     color: var(--color-val_000);
-//   }
-// }
-// @keyframes sampleAnm {
-//   0% {
-//     width: 120px;
-//   }
-//   100% {
-//     width: 360px;
-//   }
-// }
-
-// .blue-box {
-//   &.tra-left-move {
-//     position: absolute;
-//     left: 0;
-//     transition-property: left;
-//     transition-duration: 1s;
-//     &:hover {
-//       left: 100px;
-//     }
-//   }
-//   &.tra-show-hide {
-//     opacity: 0;
-//     transition-property: opacity;
-//     transition-duration: 0.5s;
-//     &:hover {
-//       opacity: 1;
-//     }
-//   }
-//   &.tra-exp {
-//     transition-property: width, height;
-//     transition-duration: 0.5s, 0.5s;
-//     &:hover {
-//       width: 200px !important;
-//       height: 200px !important;
-//     }
-//   }
-//   &.tra-color {
-//     transition-property: background-color;
-//     transition-duration: 1s;
-//     &:hover {
-//       background-color: red !important;
-//     }
-//   }
-//   &.tra-shape {
-//     transition-property: border-radius;
-//     transition-duration: 0.5s;
-//     &:hover {
-//       border-radius: 50%;
-//     }
-//   }
-// }
-
-
-
-
-// .tra-txt-color {
-//   color: black;
-//   transition: color 0.3s;
-//   &:hover {
-//     color: yellow;
-//   }
-// }
-// .tra-txt-fontsize {
-//   color: black;
-//   font-size: 16px;
-//   transition: font-size 0.5s;
-//   &:hover {
-//     font-size: 24px;
-//   }
-// }
-
-// .transition-anime {
-//   .box {
-//     width: 100px;
-//     height: 100px;
-//     background-color: blue;
-//     transition: transform 0.3s ease;
-//     &:hover {
-//       transform: rotate(45deg) scale(1.2);
-//     }
-//   }
-// }
-// .keyframes-anime {
-//   .box {
-//     width: 100px;
-//     height: 100px;
-//     background-color: blue;
-//     &:hover {
-//       animation: fadeawayAnime 2s ease;
-//     }
-//   }
-// }
-// @keyframes fadeawayAnime{
-//   0% {
-//     transform: scale(1, 1);
-//   }
-//   25% {
-//     transform: scale(1.08, 1.08);
-//   }
-//   50% {
-//     transform: scale(1, 1);
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
-
-
-
+@keyframes moveRight01 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+@keyframes moveRight02 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: .5;
+  }
+  95% {
+    transform: scale(.95, .95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
+}
+@keyframes moveRight02_2 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: .5;
+  }
+  95% {
+    transform: scale(.95, .95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
+}

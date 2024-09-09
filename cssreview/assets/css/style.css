@@ -496,7 +496,7 @@ main {
 .css-details_tips figure figcaption h3 {
   font-size: 1rem;
   margin-bottom: var(--mb10);
-  line-height: 1;
+  line-height: 1.2;
 }
 .css-details_tips figure figcaption p {
   font-size: 0.8rem;
@@ -720,7 +720,7 @@ html.remodal-is-locked {
   width: 1240px;
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
-  font-size: var(--base-size_1);
+  font-size: var(--base-size_tq);
   line-height: 1.2;
 }
 .propertyType table th, .valueType_detail table th {
@@ -925,4 +925,76 @@ html.remodal-is-locked {
 }
 #cssTransform-02 .example-wrap_hov .blue-box.trans-basic_07:hover {
   transform: rotateY(45deg) translateZ(100px);
+}
+
+#cssTransform-03 .blue-box.amin-basic_01:hover {
+  animation-name: moveRight01;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+}
+#cssTransform-03 .blue-box.amin-basic_02:hover {
+  animation-name: moveRight02;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+}
+#cssTransform-03 .blue-box.amin-basic_02_2:hover {
+  animation-name: moveRight02_2;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveRight01 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+@keyframes moveRight02 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: 0.5;
+  }
+  95% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
+}
+@keyframes moveRight02_2 {
+  0% {
+    transform: scale(1, 1); /* @keyframes0%の時、大きさはそのまま */
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.08, 1.08); /* @keyframes25%の時、少しだけ大きくなります */
+  }
+  50% {
+    transform: scale(1, 1); /* @keyframes50%の時、大きさは戻ります */
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.08, 1.08);
+    opacity: 0.5;
+  }
+  95% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    opacity: 0; /* そしてそのまま、スッと消えるアニメーションを、2.5秒かけてeaseで再現 */
+  }
 }/*# sourceMappingURL=style.css.map */
