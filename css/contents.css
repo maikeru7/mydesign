@@ -1,29 +1,111 @@
-main .cantents-wrap .main-promtion {margin: 0 auto 20px; padding-bottom: 20px;}
-main .cantents-wrap .main-promtion h1 {font-size: 23px;}
-@media screen and (max-width: 768px) {
-  main .cantents-wrap .main-promtion {padding-bottom:10px;}
+main .cantents-wrap .main-promtion {
+  margin: 0 auto 20px;
+  padding-bottom: 20px;
+}
+main .cantents-wrap .main-promtion h1 {
+  font-size: 23px;
 }
 
+@media screen and (max-width: 768px) {
+  main .cantents-wrap .main-promtion {
+    padding-bottom: 10px;
+  }
+}
+.main-promtion .header-wrap .ttlbox {
+  max-width: 200px;
+  margin: 50px auto 50px;
+  text-align: center;
+}
 
-.main-promtion hgroup .ttlbox {max-width: 200px; margin:50px auto 50px; text-align: center; border-bottom:1px solid rgba(0,0,0,0.1);}
-.main-promtion hgroup .ttlbox h1 {text-align: center; line-height: 1.0; letter-spacing:-0.01em; margin-bottom: 0.3em;}
+.main-promtion .header-wrap .ttlbox h1 {
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
 
-.main-promtion_primaryInfo {display: flex; align-items: center; margin-bottom: 50px;}
-.main-promtion_primaryInfo picture.main-visual,
-.main-promtion_primaryInfo div.detail {width: 50%;}
-.main-promtion_primaryInfo div.detail {padding: 50px;}
-.main-promtion_primaryInfo div.detail hgroup {margin-bottom: 20px;}
-.main-promtion_primaryInfo div.detail hgroup h1 {border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: .4em; margin-bottom: .2em; line-height: 1.0; letter-spacing:-0.01em;}
-.main-promtion_primaryInfo div.detail hgroup h1 span {font-weight: normal; margin-right: 0.5em; font-size: 32px;}
-.main-promtion_primaryInfo div.detail hgroup h2 {line-height: 1.0; letter-spacing:-0.01em;}
-.main-promtion_primaryInfo .detail-data {display: inline-flex;}
-.main-promtion_primaryInfo .detail-data a {line-height: 1.8; letter-spacing:-0.01em; color: rgba(0,0,0,0.4); margin: 0; padding: 10px 20px; border: 1px solid rgba(0,0,0,0.3); border-radius: 5px; font-size: 18px; transition: all 0.5s 0s ease;}
-.main-promtion_primaryInfo .detail-data a:hover {color:#333; border: 1px solid #333; border-radius: 20px;}
+.main-promtion_primaryInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.main-promtion_primaryInfo picture.main-visual {
+  width: 50%;
+}
+.main-promtion_primaryInfo picture.main-visual img {
+  width: 100%;
+}
+.main-promtion_primaryInfo div.detail {
+  width: 50%;
+  padding: 50px;
+}
+.main-promtion_primaryInfo div.detail .detail-header {
+  margin-bottom: 20px;
+}
+.main-promtion_primaryInfo div.detail .detail-header h1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.4em;
+  margin-bottom: 0.2em;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+.main-promtion_primaryInfo div.detail .detail-header h1 span {
+  font-weight: normal;
+  margin-right: 0.5em;
+  font-size: 32px;
+}
+.main-promtion_primaryInfo div.detail .detail-header h2 {
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.main-promtion_primaryInfo div.detail .comment {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fefefe;
+}
+.main-promtion_primaryInfo div.detail .comment p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+.main-promtion_primaryInfo .detail-data {
+  display: inline-flex;
+}
+.main-promtion_primaryInfo .detail-data a {
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.5s 0s ease;
+}
+.main-promtion_primaryInfo .detail-data a:hover {
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 20px;
+}
 
 @media screen and (max-width: 768px) {
-  .main-promtion_primaryInfo {display:block;}
-  .main-promtion_primaryInfo picture.main-visual,
-  .main-promtion_primaryInfo div.detail {width: 100%;}
-  .main-promtion_primaryInfo div.detail {padding: 20px;}
-  .main-promtion_primaryInfo .detail-data {display: flex;}
-}
+  .main-promtion_primaryInfo {
+    display: block;
+  }
+  .main-promtion_primaryInfo picture.main-visual {
+    width: 100%;
+  }
+  .main-promtion_primaryInfo div.detail {
+    width: 100%;
+    padding: 20px;
+  }
+  .main-promtion_primaryInfo .detail-data {
+    display: flex;
+  }
+}/*# sourceMappingURL=contents.css.map */
