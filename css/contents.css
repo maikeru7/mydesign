@@ -78,7 +78,7 @@ main .cantents-wrap .main-promtion h1 {
   display: inline-flex;
 }
 .main-promtion_primaryInfo .detail-data a {
-  line-height: 1.8;
+  line-height: 1;
   letter-spacing: -0.01em;
   color: rgba(0, 0, 0, 0.4);
   margin: 0;
