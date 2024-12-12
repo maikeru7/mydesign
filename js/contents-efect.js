@@ -2,7 +2,7 @@ $(function () {
   'use strict';
 
   // bodyにdivを追加
-  $("body").append('<div id="curtain">');
+  $("body").append('<div id="curtain" role="presentation">');
   // 追加したdivを塗りつぶしてから透明化アニメーション
   $("#curtain")
     .css({
@@ -12,7 +12,7 @@ $(function () {
       width: "100%",
       height: "100%",
       backgroundColor: "#fff",
-      opacity: 100,
+      opacity: 1,
     })
     .animate(
       {
@@ -29,26 +29,27 @@ $(function () {
     $("#GlobalNav").toggleClass("open");
   });
 
-  let offsetY = -10;
-  let time = 500;
-  $("a[href^=#]").click(function () {
-    let target = $(this.hash);
+  const offsetY = -10;
+  const time = 500;
+  $("a[href^='#']:not([href='#'])").click(function () {
+    const target = $(this.hash);
     if (!target.length) return;
-    let targetY = target.offset().top + offsetY;
+    const targetY = target.offset().top + offsetY;
     $("html,body").animate({ scrollTop: targetY }, time, "swing");
     window.history.pushState(null, null, this.hash);
     return false;
   });
-});
 
-$(".fadein").css("visibility", "hidden");
-$(window).scroll(function () {
-  $(".fadein").each(function () {
-    let elemPos = $(this).offset().top;
-    let scroll = $(window).scrollTop();
-    let windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 200) {
-      $(this).addClass("scrollin");
-    }
+  $(window).scroll(function () {
+    $(".fadein").each(function () {
+      const elemPos = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + 200) {
+        $(this).addClass("scrollin");
+      }
+    });
   });
+  $(window).trigger('scroll');
+
 });
