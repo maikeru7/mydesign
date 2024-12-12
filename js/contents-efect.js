@@ -1,9 +1,4 @@
 $(function () {
-  $("#GlobalNav .button").on("click", function () {
-    $("#GlobalNav").toggleClass("open");
-  });
-});
-$(function () {
   // bodyにdivを追加
   $("body").append('<div id="curtain">');
   // 追加したdivを塗りつぶしてから透明化アニメーション
@@ -27,25 +22,31 @@ $(function () {
         $(this).remove();
       }
     );
+
+  $("#GlobalNav .button").on("click", function () {
+    $("#GlobalNav").toggleClass("open");
+  });
 });
+
 $(".fadein").css("visibility", "hidden");
 $(window).scroll(function () {
   $(".fadein").each(function () {
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
+    let elemPos = $(this).offset().top;
+    let scroll = $(window).scrollTop();
+    let windowHeight = $(window).height();
     if (scroll > elemPos - windowHeight + 200) {
       $(this).addClass("scrollin");
     }
   });
 });
+
 $(function () {
-  var offsetY = -10;
-  var time = 500;
+  let offsetY = -10;
+  let time = 500;
   $("a[href^=#]").click(function () {
-    var target = $(this.hash);
+    let target = $(this.hash);
     if (!target.length) return;
-    var targetY = target.offset().top + offsetY;
+    let targetY = target.offset().top + offsetY;
     $("html,body").animate({ scrollTop: targetY }, time, "swing");
     window.history.pushState(null, null, this.hash);
     return false;
