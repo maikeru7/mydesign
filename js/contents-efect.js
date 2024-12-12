@@ -1,4 +1,6 @@
 $(function () {
+  'use strict';
+
   // bodyにdivを追加
   $("body").append('<div id="curtain">');
   // 追加したdivを塗りつぶしてから透明化アニメーション
@@ -26,6 +28,17 @@ $(function () {
   $("#GlobalNav .button").on("click", function () {
     $("#GlobalNav").toggleClass("open");
   });
+
+  let offsetY = -10;
+  let time = 500;
+  $("a[href^=#]").click(function () {
+    let target = $(this.hash);
+    if (!target.length) return;
+    let targetY = target.offset().top + offsetY;
+    $("html,body").animate({ scrollTop: targetY }, time, "swing");
+    window.history.pushState(null, null, this.hash);
+    return false;
+  });
 });
 
 $(".fadein").css("visibility", "hidden");
@@ -37,18 +50,5 @@ $(window).scroll(function () {
     if (scroll > elemPos - windowHeight + 200) {
       $(this).addClass("scrollin");
     }
-  });
-});
-
-$(function () {
-  let offsetY = -10;
-  let time = 500;
-  $("a[href^=#]").click(function () {
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top + offsetY;
-    $("html,body").animate({ scrollTop: targetY }, time, "swing");
-    window.history.pushState(null, null, this.hash);
-    return false;
   });
 });
