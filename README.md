@@ -1,4 +1,5 @@
 ### my web design
+241218 過去制作サイト（MAXHUB、XR Dive）DEMOフォルダに追加  
 241212 TOPページ/content-efect.js、調整  
 241209 TOPページ、調整  
 241209 TOPページ、画像追加  
