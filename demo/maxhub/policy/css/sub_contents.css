@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 
+INDIVIDUAL STYLING
+=======================  */
+
+/* #privacy */
+#privacySection .content-wrap_outerFrame {
+  padding: 55px 0;
+}
+@media only screen and (max-width: 667px) {
+  #privacySection .content-wrap_outerFrame {
+    padding: 80px 0 0;
+  }
+}
+
+#privacySection h1.main-ttl {
+  font-size: var(--base-fs_2h);
+  font-weight: 700;
+  text-align:left;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  color: var(--base_color1);
+}
+#privacySection h1.main-ttl span {
+  display: block;
+  font-size: 30%;
+  color: var(--base_color3);
+}
+#privacySection .heder {
+  margin-bottom: 32px;
+}
+#privacySection .article h1 {
+  font-size: 21px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+#privacySection .article div {
+  margin-bottom: 32px;
+}
+#privacySection .article div h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#privacySection .article div p {
+  margin-bottom: 10px;
+}
+#privacySection .article div ul li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+#privacySection .article div ol li {list-style-type:none; list-style-position:outside; counter-increment:cnt; margin-bottom:10px; line-height:1.5;}
+#privacySection .article div ol li span {display: var(--dsp-block); margin-top:-1.5em; padding-left:1.5em;}
+#privacySection .article div ol li:before {/*display: marker;*/ content: "(" counter(cnt) ")"; margin-right:0.2em;}
+
+/* #privacy */
+/* 
+INDIVIDUAL STYLING
+=======================  */

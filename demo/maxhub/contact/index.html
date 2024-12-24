@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="description" content="MAXHUB(マックスハブ)についてのお問い合わせページです。導入をご検討中の方や製品への疑問点など、お気軽にお問い合わせください。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜株式会社ITI</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css" integrity="sha256-/jO/fTJ0k1OjSZEq6mnys4V6x6RG6MVJv34CFHWv0To=" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/contents.css">
+<link rel="stylesheet" href="css/sub_contents.css?var=202403281629">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body id="contactForm-contents">
+<header class="show">
+  <div class="header-wrap">
+    <h1><a href="../"><img src="../img/logo_itimaxhub.png" alt="iti-inc MAXHUB(マックスハブ) ロゴ"></a></h1>
+    <nav class="globalmenu" id="GlobalNav">
+      <div class="button">
+        <svg x="0px" y="0px" width="100%" viewBox="0 0 26 26" class="top" enable-background="new 0 0 26 26">
+          <rect width="26" height="2" x="0" y="12"></rect>
+        </svg>
+        <svg x="0px" y="0px" width="100%" viewBox="0 0 26 26" class="middle" enable-background="new 0 0 26 26">
+          <rect width="26" height="2" x="0" y="12"></rect>
+        </svg>
+        <svg x="0px" y="0px" width="100%" viewBox="0 0 26 26" class="bottom" enable-background="new 0 0 26 26">
+          <rect width="26" height="2" x="0" y="12"></rect>
+        </svg>
+      </div>
+      <div class="header-menu"></div>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section class="main-content">
+      <section class="content-wrap form" id="form">
+        <div class="content-wrap_Block">
+          <div class="content-wrap_outerFrame">
+            <div class="content-wrap_innerFrame fadein">
+              <div class="breadcrumb">
+                <p><a href="../">HOME</a> &gt; お問い合わせ</p>
+              </div>
+              <h1 class="main-ttl">お問い合わせ<span>Contact</span></h1>
+              <p class="read">デモンストレーションのご予約等は、こちらからお問い合わせください。</p>
+              <form id="contactForm">
+                <div class="form_blockWrap basic_data">
+                  <div class="form_block">
+                    <label for="name">お名前<span>必須</span></label>
+                    <input class="form_fileld" type="text" name="name" id="name" placeholder="例）鈴木太郎" required>
+                    <p class="text-danger" id="name_error"></p>
+                  </div>
+                  <div class="form_block">
+                    <label for="name_furigana">お名前（ふりがな）<span>必須</span></label>
+                    <input class="form_fileld" type="text" name="name_furigana" id="name_furigana" placeholder="例）すずきたろう" required>
+                    <p class="text-danger" id="name_furigana_error"></p>
+                  </div>
+                  <div class="form_block">
+                    <label for="company">会社名<span>必須</span></label>
+                    <input class="form_fileld" type="text" name="company" id="company" placeholder="例）株式会社○○○" required>
+                    <p class="text-danger" id="company_error"></p>
+                  </div>
+                  <div class="form_block">
+                    <label for="position_department">役職・部署名</label>
+                    <input class="form_fileld" type="text" name="position_department" id="position_department">
+                    <p class="text-danger" id="position_department_error"></p>
+                  </div>
+                  <div class="form_block">
+                    <label for="telnumber">電話番号<span>必須</span></label>
+                    <input class="form_fileld" type="telnumber" name="telnumber" id="telnumber" placeholder="09012345678" required>
+                    <p class="text-danger" id="telnumber_error"></p>
+                  </div>
+                  <div class="form_block">
+                    <label for="email">メールアドレス<span>必須</span></label>
+                    <input class="form_fileld inputs" type="email" name="email" id="email" placeholder="○○○@○○○.co.jp" required>
+                    <p class="text-danger" id="email_error"></p>
+                  </div>
+                  <div class="form_block custom-select-container">
+                    <label for="inquiry_selector">お問い合わせ項目<span>必須</span></label>
+                    <select name="inquiry_selector" id="inquiry_selector" required>
+                    <option value="">お問い合わせ項目を選択してください</option>
+                    <option value="1">デモンストレーション予約</option>
+                    <option value="2">製品について</option>
+                    <option value="3">価格について</option>
+                    <!-- <option value="4">ショールーム見学</option> -->
+                    <option value="5">その他</option>
+                    </select>
+                    <svg id="faqArrow-05" class="custom-select-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.12 112.06">
+                      <polygon class="cls-1 faq-arrow" points="171.12 26.5 144.62 0 85.56 59.06 26.5 0 0 26.5 85.56 112.06 171.12 26.5"/>
+                    </svg>
+                  </div>
+                  <p class="text-danger" id="inquiry_selector_error"></p>
+                </div>
+                <div class="form_blockWrap date_data">
+                  <div class="form_header">
+                    <h3>デモンストレーション希望日</h3>
+                    <ul class="notice">
+                      <li>※お問い合わせ項目で「デモンストレーション希望」を選択された場合は入力必須項目になります。</li>
+                      <li>※ご希望に添えない場合もあります。その場合はこちらから日程を提案させていただきます。</li>
+                      <li>※デモンストレーションはオンラインとなります。</li>
+                    </ul>
+                  </div>
+                  <div class="form_block" id="first">
+                    <div class="preferred_date">
+                      <label for="first-datepicker-input">第一希望日</label>
+                      <div class="date">
+                        <input class="form_fileld" type="text" name="first-datepicker-input" id="first-datepicker-input" required>
+                        <span id="first-calendar-icon"><img src="img/calendar-icn.png" alt="カレンダーアイコン"></span>
+                      </div>
+                    </div>
+                    <div class="preferred_time">
+                      <label for="first-time-input">希望時間</label>
+                      <div class="time">
+                        <input class="form_fileld" type="text" name="first-time-input" id="first-time-input" placeholder="ご希望の時間がある場合はご記入ください">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-danger" id="first-datepicker-input_error"></p>
+                  <div class="form_block" id="second">
+                    <div class="preferred_date">
+                      <label for="second-datepicker-input">第二希望日</label>
+                      <div class="date">
+                        <input class="form_fileld" type="text" name="second-datepicker-input" id="second-datepicker-input">
+                        <span id="second-calendar-icon"><img src="img/calendar-icn.png" alt="カレンダーアイコン"></span>
+                      </div>
+                    </div>
+                    <div class="preferred_time">
+                      <label for="second-time-input">希望時間</label>
+                      <div class="time">
+                        <input class="form_fileld" type="text" name="second-time-input" id="second-time-input" placeholder="ご希望の時間がある場合はご記入ください">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-danger" id="second-datepicker-input_error"></p>
+                  <div class="form_block" id="third">
+                    <div class="preferred_date">
+                      <label for="third-datepicker-input">第三希望日</label>
+                      <div class="date">
+                        <input class="form_fileld" type="text" name="third-datepicker-input" id="third-datepicker-input">
+                        <span id="third-calendar-icon"><img src="img/calendar-icn.png" alt="カレンダーアイコン"></span>
+                      </div>
+                    </div>
+                    <div class="preferred_time">
+                      <label for="third-time-input">希望時間</label>
+                      <div class="time">
+                        <input class="form_fileld" type="text" name="third-time-input" id="third-time-input" placeholder="ご希望の時間がある場合はご記入ください">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-danger" id="third-datepicker-input_error"></p>
+                <div class="form_blockWrap inquiry_data">
+                  <div class="form_block">
+                    <label for="inquiry">お問い合わせ内容<span>必須</span></label>
+                    <textarea class="form_fileld" name="inquiry" id="inquiry" required></textarea>
+                    <p class="text-danger" id="inquiry_error"></p>
+                  </div>
+                </div>
+                <div class="form_blockWrap confirmation">
+                  <div class="form_block">
+                    <input type="checkbox" id="confirmation" name="confirmation" /><label for="confirmation">弊社の<a href="https://sup.iti-inc.co.jp/maxhub-test/maxhub-top/policy/">プライバシーポリシー</a>に同意する</label>
+                  </div>
+                  <div class="form_block">
+                    <p class="text-danger" id="confirmation_error"></p>
+                  </div>
+                </div>
+                <div class="form_blockWrap confirmation-btn">
+                  <div class="form_block">
+                    <input class="correct-btn" type="button" value="確認する" disabled>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="popup" id="confirmationScreen">
+          <div class="popup-content">
+            <button id="close-01">
+              <svg id="cros-01" data-name="cros" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.13 102.13">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #888;
+                      stroke-width: 0px;
+                    }
+                  </style>
+                </defs>
+                <polygon class="cls-1" points="102.13 16.57 85.56 0 51.06 34.5 16.57 0 0 16.57 34.5 51.06 0 85.56 16.57 102.13 51.06 67.63 85.56 102.13 102.13 85.56 67.63 51.06 102.13 16.57"/>
+              </svg>
+            </button>
+            <div class="popup-content_header">
+              <h1>入力内容確認</h1>
+              <p>お問い合わせ内容はこちらでよろしいでしょうか？<br>よろしければ「送信する」ボタンを押してください。</p>
+            </div>
+            <div class="scroll-box">
+              <div class="popup-content_detail"></div>
+            </div>
+            <div class="btn-wrap">
+              <button id="close-correct">修正する</button>
+              <button id="close-completed" class="completed-popup">送信する</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+<footer></footer>
+<script src="../js/common_navigation.js"></script>
+<!-- jQuery UI ライブラリの読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.13.2/dist/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.min.css">
+<script src="js/efect.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
