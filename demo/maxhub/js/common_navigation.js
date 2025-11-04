@@ -1,6 +1,6 @@
 (function(){
-  $('.header-menu').load('https://sup.iti-inc.co.jp/maxhub-test/maxhub-top/js/common_navi/siteHeder.html');
-  $('footer').load('https://sup.iti-inc.co.jp/maxhub-test/maxhub-top/js/common_navi/siteFooter.html');
+  $('.header-menu').load('https://maikeru7-webdesign.netlify.app/demo/maxhub/js/common_navi/siteHeder.html');
+  $('footer').load('https://maikeru7-webdesign.netlify.app/demo/maxhub/js/common_navi/siteFooter.html');
 })();
 
 // $(function () {
