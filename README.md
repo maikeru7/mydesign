@@ -1,5 +1,5 @@
 ### my web design
-251114 テスト
+251114 テスト  
 241224 MAXHUB / MAXHUB LP 移植  
 241212 TOPページ/content-efect.js、調整  
 241209 TOPページ、調整  
