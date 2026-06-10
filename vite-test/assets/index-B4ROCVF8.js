@@ -13,7 +13,7 @@
 
         <div class="css-details_tips" id="modal1_tile">
           <figure>
-            <img src="/assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
+            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
             <figcaption>
               <h2>トランジションプロパティ基本のき</h2>
               <h3><span class="lg-en">CSS - Transition</span> 基本的な使用方法について</h3>
@@ -25,7 +25,7 @@
 
         <div class="css-details_tips" id="modal2_tile">
           <figure>
-            <img src="/assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
+            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
             <figcaption>
               <h2>トランジションプロパティ応用編</h2>
               <h3><span class="lg-en">CSS - Transition</span> 様々な動きについて</h3>
@@ -37,7 +37,7 @@
 
         <div class="css-details_tips" id="modal3_tile">
           <figure>
-            <img src="/assets/img/bnr_02.png" alt="トランジションのプロパティについて">
+            <img src="./assets/img/bnr_02.png" alt="トランジションのプロパティについて">
             <figcaption>
               <h2>トランスフォームプロパティ基本のき</h2>
               <h3><span class="lg-en">CSS - Transform</span> 基本的な使用方法について</h3>
@@ -49,7 +49,7 @@
 
         <div class="css-details_tips" id="modal4_tile">
           <figure>
-            <img src="/assets/img/bnr_02_2.png" alt="トランスフォームとトランジションの組み合わせについて">
+            <img src="./assets/img/bnr_02_2.png" alt="トランスフォームとトランジションの組み合わせについて">
             <figcaption>
               <h2>トランスフォームとアニメーションについて その1</h2>
               <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
@@ -61,7 +61,7 @@
 
         <div class="css-details_tips" id="modal5_tile">
           <figure>
-            <img src="/assets/img/bnr_02_3.png" alt="animationと@keyframesの組み合わせ">
+            <img src="./assets/img/bnr_02_3.png" alt="animationと@keyframesの組み合わせ">
             <figcaption>
               <h2>トランスフォームとアニメーションについて その2</h2>
               <h3><span class="lg-en">CSS - Transform</span> animationプロパティと@keyframesの組合せについて</h3>
