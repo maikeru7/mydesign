@@ -1,86 +1,6 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})(),document.querySelectorAll(`#target > div`).forEach(e=>{e.innerHTML=e.innerText.split(``).map(e=>`<span>${e}</span>`).join(``)}),document.querySelector(`#app`).innerHTML=`
-<main>
-    <section id="mainVisual">
-      <div class="mv-ttl">
-        <h1 id="target" class="lg-en_mainttl">
-          <div>CSS</div>
-          <div>REVIEW</div>
-        </h1>
-      </div>
-    </section>
-    <section id="main-contents">
-      <section id="contents-wrapper" class="css-details">
-
-        <div class="css-details_tips" id="modal1_tile">
-          <figure>
-            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
-            <figcaption>
-              <h2>トランジションプロパティ基本のき</h2>
-              <h3><span class="lg-en">CSS - Transition</span> 基本的な使用方法について</h3>
-              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
-              <a id="modal1" class="js_modalButton" data-remodal-target="modal1">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="css-details_tips" id="modal2_tile">
-          <figure>
-            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
-            <figcaption>
-              <h2>トランジションプロパティ応用編</h2>
-              <h3><span class="lg-en">CSS - Transition</span> 様々な動きについて</h3>
-              <p>マウスを要素に重ねる（ホバーする）以外にも様々なアクションに応じて要素を変化させる事が...</p>
-              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="css-details_tips" id="modal3_tile">
-          <figure>
-            <img src="./assets/img/bnr_02.png" alt="トランジションのプロパティについて">
-            <figcaption>
-              <h2>トランスフォームプロパティ基本のき</h2>
-              <h3><span class="lg-en">CSS - Transform</span> 基本的な使用方法について</h3>
-              <p>トランスフォーム(Transform)とは、特定の要素を回転、拡大縮小、傾斜、移動することが...</p>
-              <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="css-details_tips" id="modal4_tile">
-          <figure>
-            <img src="./assets/img/bnr_02_2.png" alt="トランスフォームとトランジションの組み合わせについて">
-            <figcaption>
-              <h2>トランスフォームとアニメーションについて その1</h2>
-              <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
-              <p>トランスフォーム(Transform)は、アニメーションが適用されていない場合、CSSが読まれた...</p>
-              <a id="modal4" class="js_modalButton" data-remodal-target="modal4">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="css-details_tips" id="modal5_tile">
-          <figure>
-            <img src="./assets/img/bnr_02_3.png" alt="animationと@keyframesの組み合わせ">
-            <figcaption>
-              <h2>トランスフォームとアニメーションについて その2</h2>
-              <h3><span class="lg-en">CSS - Transform</span> animationプロパティと@keyframesの組合せについて</h3>
-              <p>トランスフォーム(Transform)は、animationプロパティと@keyframesを組み合わせて使用する...</p>
-              <a id="modal5" class="js_modalButton" data-remodal-target="modal5">続きはこちら</a>
-            </figcaption>
-          </figure>
-        </div> 
-      </section>
-    </section>
-</main>
-<footer>
-
-
-</footer>
-
-<section><!-- モーダル画面エリア 開始 -->
-
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})(),document.querySelectorAll(`#target > div`).forEach(e=>{e.innerHTML=e.innerText.split(``).map(e=>`<span>${e}</span>`).join(``)});var e=`
     <div id="modal1_popup" class="remodal modal-content" data-remodal-id="modal1" data-remodal-options="hashTracking: false">
+
       <section class="school-infomaiton modal-content_wrap">
 
         <!-- ここにコンテンツを配置 #cssTransition-01 -->
@@ -310,7 +230,7 @@
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal1_popup -->
-
+`,t=`
 
     <div id="modal2_popup" class="remodal modal-content" data-remodal-id="modal2" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
@@ -404,6 +324,8 @@
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal2_popup -->
+
+`,n=`
 
     <div id="modal3_popup" class="remodal modal-content" data-remodal-id="modal3" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
@@ -606,6 +528,8 @@
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal3_popup -->
+
+`,r=`
 
     <div id="modal4_popup" class="remodal modal-content" data-remodal-id="modal4" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
@@ -817,7 +741,7 @@
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal4_popup -->
 
-
+`,i=`
 
     <div id="modal5_popup" class="remodal modal-content" data-remodal-id="modal5" data-remodal-options="hashTracking: false">
       <section class="school-infomaiton modal-content_wrap">
@@ -1022,6 +946,93 @@
       </section>
       <button class="remodal-close initial-data" data-remodal-action="close">close</button>
     </div><!-- modal5_popup -->
+`;document.querySelector(`#app`).innerHTML=`
+<main>
+    <section id="mainVisual">
+      <div class="mv-ttl">
+        <h1 id="target" class="lg-en_mainttl">
+          <div>CSS</div>
+          <div>REVIEW</div>
+        </h1>
+      </div>
+    </section>
+    <section id="main-contents">
+      <section id="contents-wrapper" class="css-details">
+
+        <div class="css-details_tips" id="modal1_tile">
+          <figure>
+            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
+            <figcaption>
+              <h2>トランジションプロパティ基本のき</h2>
+              <h3><span class="lg-en">CSS - Transition</span> 基本的な使用方法について</h3>
+              <p>トランジションとは、要素の1つの状態から別の状態への変化させるために使用される...</p>
+              <a id="modal1" class="js_modalButton" data-remodal-target="modal1">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips" id="modal2_tile">
+          <figure>
+            <img src="./assets/img/bnr_01.png" alt="CSS Transition によるアニメーションについて">
+            <figcaption>
+              <h2>トランジションプロパティ応用編</h2>
+              <h3><span class="lg-en">CSS - Transition</span> 様々な動きについて</h3>
+              <p>マウスを要素に重ねる（ホバーする）以外にも様々なアクションに応じて要素を変化させる事が...</p>
+              <a id="modal2" class="js_modalButton" data-remodal-target="modal2">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips" id="modal3_tile">
+          <figure>
+            <img src="./assets/img/bnr_02.png" alt="トランジションのプロパティについて">
+            <figcaption>
+              <h2>トランスフォームプロパティ基本のき</h2>
+              <h3><span class="lg-en">CSS - Transform</span> 基本的な使用方法について</h3>
+              <p>トランスフォーム(Transform)とは、特定の要素を回転、拡大縮小、傾斜、移動することが...</p>
+              <a id="modal3" class="js_modalButton" data-remodal-target="modal3">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips" id="modal4_tile">
+          <figure>
+            <img src="./assets/img/bnr_02_2.png" alt="トランスフォームとトランジションの組み合わせについて">
+            <figcaption>
+              <h2>トランスフォームとアニメーションについて その1</h2>
+              <h3><span class="lg-en">CSS - Transform</span> アニメーション(transition)との組合せ方について</h3>
+              <p>トランスフォーム(Transform)は、アニメーションが適用されていない場合、CSSが読まれた...</p>
+              <a id="modal4" class="js_modalButton" data-remodal-target="modal4">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="css-details_tips" id="modal5_tile">
+          <figure>
+            <img src="./assets/img/bnr_02_3.png" alt="animationと@keyframesの組み合わせ">
+            <figcaption>
+              <h2>トランスフォームとアニメーションについて その2</h2>
+              <h3><span class="lg-en">CSS - Transform</span> animationプロパティと@keyframesの組合せについて</h3>
+              <p>トランスフォーム(Transform)は、animationプロパティと@keyframesを組み合わせて使用する...</p>
+              <a id="modal5" class="js_modalButton" data-remodal-target="modal5">続きはこちら</a>
+            </figcaption>
+          </figure>
+        </div> 
+      </section>
+    </section>
+</main>
+<footer>
+
+
+</footer>
+
+<section><!-- モーダル画面エリア 開始 -->
+
+${e}
+${t}
+${n}
+${r}
+${i}
 
 </section><!-- モーダル画面エリア 終了 -->
-`;var e=document.createElement(`script`);e.src=`https://cpwebassets.codepen.io/assets/embed/ei.js`,e.async=!0,document.body.appendChild(e);
+`;var a=document.createElement(`script`);a.src=`https://cpwebassets.codepen.io/assets/embed/ei.js`,a.async=!0,document.body.appendChild(a);
